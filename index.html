@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratama Digitect - Race Management System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm fixed w-full z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-blue-600 flex items-center gap-2">
+                <i class="fa-solid fa-flag-checkered"></i> Pratama Digitect
+            </a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#fitur" class="text-gray-600 hover:text-blue-600 transition">Fitur</a>
+                <a href="#harga" class="text-gray-600 hover:text-blue-600 transition">Harga</a>
+                <a href="#faq" class="text-gray-600 hover:text-blue-600 transition">FAQ</a>
+                <a href="#kontak" class="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition font-medium">Hubungi Kami</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-gray-600 focus:outline-none">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-6 py-4 shadow-lg">
+            <a href="#fitur" class="block py-2 text-gray-600 hover:text-blue-600">Fitur</a>
+            <a href="#harga" class="block py-2 text-gray-600 hover:text-blue-600">Harga</a>
+            <a href="#faq" class="block py-2 text-gray-600 hover:text-blue-600">FAQ</a>
+            <a href="#kontak" class="block py-2 mt-2 text-blue-600 font-bold">Hubungi Kami</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-32 pb-20 bg-gradient-to-br from-blue-900 to-blue-700 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                Kelola Event Lari Anda <br> Dengan Lebih Profesional
+            </h1>
+            <p class="text-xl md:text-2xl text-blue-100 mb-10 max-w-3xl mx-auto">
+                Solusi lengkap mulai dari pendaftaran dengan <strong>Custom Domain</strong>, Aplikasi RPC, hingga E-Sertifikat dan Timing System.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#demo" class="bg-white text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition shadow-lg">
+                    Jadwalkan Demo
+                </a>
+                <a href="#fitur" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-900 transition">
+                    Pelajari Lebih Lanjut
+                </a>
+            </div>
+            
+            <!-- Dashboard Preview Image Placeholder -->
+            <div class="mt-16 mx-auto max-w-5xl bg-gray-900 rounded-xl shadow-2xl overflow-hidden border border-gray-700">
+                <!-- Browser Window Header -->
+                <div class="bg-gray-800 px-4 py-3 flex items-center gap-2 border-b border-gray-700">
+                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                    <div class="ml-4 bg-gray-700 rounded-md px-3 py-1 text-xs text-gray-400 font-mono flex-1 text-left">dashboard.pratamadigitect.com</div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Dashboard Preview" class="w-full opacity-90">
+            </div>
+        </div>
+    </header>
+
+    <!-- Partners Section -->
+    <section class="py-10 bg-white border-b border-gray-100">
+        <div class="container mx-auto px-6">
+            <p class="text-center text-gray-500 font-medium mb-8">Dipercaya oleh Event Organizer & Perusahaan Terkemuka</p>
+            
+            <!-- Marquee Animation -->
+            <div class="marquee-container w-full overflow-hidden relative">
+                <div class="marquee-content whitespace-nowrap">
+                    <span class="inline-block mx-8 text-2xl font-bold text-gray-400"><i class="fa-solid fa-mountain-sun"></i> IndoRunners</span>
+                    <span class="inline-block mx-8 text-2xl font-bold text-gray-400"><i class="fa-solid fa-person-running"></i> City Marathon</span>
+                    <span class="inline-block mx-8 text-2xl font-bold text-gray-400"><i class="fa-solid fa-stopwatch-20"></i> Elite Race EO</span>
+                    <span class="inline-block mx-8 text-2xl font-bold text-gray-400"><i class="fa-solid fa-heart-pulse"></i> Charity Run ID</span>
+                    <span class="inline-block mx-8 text-2xl font-bold text-gray-400"><i class="fa-solid fa-building"></i> Corp Events</span>
+                    <!-- Duplicate for seamless loop -->
+                    <span class="inline-block mx-8 text-2xl font-bold text-gray-400"><i class="fa-solid fa-mountain-sun"></i> IndoRunners</span>
+                    <span class="inline-block mx-8 text-2xl font-bold text-gray-400"><i class="fa-solid fa-person-running"></i> City Marathon</span>
+                    <span class="inline-block mx-8 text-2xl font-bold text-gray-400"><i class="fa-solid fa-stopwatch-20"></i> Elite Race EO</span>
+                    <span class="inline-block mx-8 text-2xl font-bold text-gray-400"><i class="fa-solid fa-heart-pulse"></i> Charity Run ID</span>
+                    <span class="inline-block mx-8 text-2xl font-bold text-gray-400"><i class="fa-solid fa-building"></i> Corp Events</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Showcase Section -->
+    <section id="events" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Jelajahi Event</h2>
+                <p class="text-gray-600">Temukan event lari terbaru atau lihat keseruan event yang telah berlalu.</p>
+                
+                <!-- Tabs -->
+                <div class="flex justify-center mt-8">
+                    <div class="bg-gray-100 p-1 rounded-lg inline-flex">
+                        <button onclick="switchTab('upcoming')" id="tab-upcoming" class="px-6 py-2 rounded-md text-sm font-bold bg-white text-blue-600 shadow-sm transition-all">Akan Datang</button>
+                        <button onclick="switchTab('past')" id="tab-past" class="px-6 py-2 rounded-md text-sm font-bold text-gray-500 hover:text-gray-700 transition-all">Selesai</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upcoming Events Grid -->
+            <div id="content-upcoming" class="grid md:grid-cols-3 gap-8 transition-opacity duration-300">
+                <!-- Card 1 -->
+                <div class="group bg-white rounded-xl shadow-sm hover:shadow-lg transition border border-gray-100 overflow-hidden">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1452626038306-9aae5e071dd3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Event 1" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute top-4 right-4 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">Open Registration</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-sm text-blue-600 font-semibold mb-2">12 Nov 2024</div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-900">Jakarta City Marathon</h3>
+                        <p class="text-gray-500 text-sm mb-4"><i class="fa-solid fa-location-dot mr-2"></i>Monas, Jakarta</p>
+                        <a href="#" class="block w-full text-center bg-blue-600 text-white font-bold py-2 rounded-lg hover:bg-blue-700 transition">Daftar Sekarang</a>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="group bg-white rounded-xl shadow-sm hover:shadow-lg transition border border-gray-100 overflow-hidden">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1533561052669-8299302e13bd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Event 2" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute top-4 right-4 bg-yellow-500 text-white text-xs font-bold px-3 py-1 rounded-full">Coming Soon</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-sm text-blue-600 font-semibold mb-2">15 Des 2024</div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-900">Bali Beach Run</h3>
+                        <p class="text-gray-500 text-sm mb-4"><i class="fa-solid fa-location-dot mr-2"></i>Kuta, Bali</p>
+                        <a href="#" class="block w-full text-center bg-gray-100 text-gray-400 font-bold py-2 rounded-lg cursor-not-allowed">Segera Dibuka</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Past Events Grid (Hidden by default) -->
+            <div id="content-past" class="hidden grid md:grid-cols-3 gap-8 transition-opacity duration-300">
+                <!-- Card Past 1 -->
+                <div class="group bg-white rounded-xl shadow-sm hover:shadow-lg transition border border-gray-100 overflow-hidden opacity-75 hover:opacity-100">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1552674605-469523170d9e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Event Past 1" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                        <div class="absolute top-4 right-4 bg-gray-500 text-white text-xs font-bold px-3 py-1 rounded-full">Selesai</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-sm text-gray-500 font-semibold mb-2">20 Agu 2024</div>
+                        <h3 class="text-xl font-bold mb-2 text-gray-900">Merdeka Run 10K</h3>
+                        <p class="text-gray-500 text-sm mb-4"><i class="fa-solid fa-location-dot mr-2"></i>Bandung, Jawa Barat</p>
+                        <a href="#" class="block w-full text-center border border-gray-300 text-gray-600 font-bold py-2 rounded-lg hover:bg-gray-50 transition">Lihat Hasil</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center text-blue-600 font-bold hover:text-blue-800 transition">Lihat Semua Event <i class="fa-solid fa-arrow-right ml-2"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="fitur" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Fitur Lengkap & Menyeluruh</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto text-lg">Pratama Digitect menghadirkan ekosistem manajemen event yang detail, mulai dari dashboard admin yang powerful hingga fitur interaktif untuk peserta.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Card 1: Event & Tiket -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition duration-300 border border-gray-100 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-bl-full -mr-4 -mt-4 transition group-hover:bg-blue-100"></div>
+                    <div class="w-12 h-12 bg-blue-600 text-white rounded-lg flex items-center justify-center text-xl mb-6 relative z-10">
+                        <i class="fa-solid fa-ticket"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-900">Manajemen Event & Tiket</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-green-500 mt-1"></i> <span><strong>Editor Event</strong> yang fleksibel</span></li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-green-500 mt-1"></i> <span>Manajemen Tiket & <strong>Kompliment</strong></span></li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-green-500 mt-1"></i> <span>Sistem <strong>Kode Promo</strong> & Referal</span></li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-green-500 mt-1"></i> <span>Website dengan <strong>Custom Domain</strong></span></li>
+                    </ul>
+                </div>
+
+                <!-- Card 2: CRM & Marketing -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition duration-300 border border-gray-100 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-green-50 rounded-bl-full -mr-4 -mt-4 transition group-hover:bg-green-100"></div>
+                    <div class="w-12 h-12 bg-green-600 text-white rounded-lg flex items-center justify-center text-xl mb-6 relative z-10">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-900">CRM & Komunikasi</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-green-500 mt-1"></i> <span>Broadcast <strong>Pesan WhatsApp</strong></span></li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-green-500 mt-1"></i> <span><strong>AI Customer Service</strong> (AI CS)</span></li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-green-500 mt-1"></i> <span>Follow Up Peserta Otomatis</span></li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-green-500 mt-1"></i> <span>Notifikasi Pembayaran</span></li>
+                    </ul>
+                </div>
+
+                <!-- Card 3: Race Essentials -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition duration-300 border border-gray-100 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-purple-50 rounded-bl-full -mr-4 -mt-4 transition group-hover:bg-purple-100"></div>
+                    <div class="w-12 h-12 bg-purple-600 text-white rounded-lg flex items-center justify-center text-xl mb-6 relative z-10">
+                        <i class="fa-solid fa-id-card"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-900">Race Operations</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-green-500 mt-1"></i> <span>Fitur <strong>Request & Design BIB</strong></span></li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-green-500 mt-1"></i> <span>Aplikasi <strong>RPC</strong> (Race Pack Collection)</span></li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-green-500 mt-1"></i> <span>Generator <strong>E-Sertifikat</strong> Instan</span></li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-green-500 mt-1"></i> <span>Integrasi Timing Chip (Mitra)</span></li>
+                    </ul>
+                </div>
+
+                <!-- Card 4: Analitik & Laporan -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition duration-300 border border-gray-100 relative overflow-hidden group lg:col-span-3">
+                    <div class="flex flex-col md:flex-row items-center gap-8">
+                        <div class="flex-1">
+                            <div class="w-12 h-12 bg-orange-500 text-white rounded-lg flex items-center justify-center text-xl mb-6">
+                                <i class="fa-solid fa-chart-pie"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-4 text-gray-900">Analitik & Laporan Lengkap</h3>
+                            <p class="text-gray-600 mb-4">Pantau performa event Anda dengan dashboard ringkasan yang intuitif. Unduh laporan lengkap dalam berbagai format untuk kebutuhan evaluasi dan sponsor.</p>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-full text-sm font-medium">Ringkasan Dashboard</span>
+                                <span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-full text-sm font-medium">Export Data Peserta</span>
+                                <span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-full text-sm font-medium">Laporan Keuangan</span>
+                            </div>
+                        </div>
+                        <div class="flex-1 w-full bg-gray-100 rounded-xl h-48 flex items-center justify-center border-2 border-dashed border-gray-300">
+                            <span class="text-gray-400 font-medium"><i class="fa-solid fa-chart-line mr-2"></i>Preview Grafik Analitik</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-blue-900 text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-4xl font-bold mb-2">500+</div>
+                    <div class="text-blue-200">Event Terselenggara</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2">1M+</div>
+                    <div class="text-blue-200">Peserta Terdaftar</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2">99.9%</div>
+                    <div class="text-blue-200">Uptime Server</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2">24/7</div>
+                    <div class="text-blue-200">Dukungan Teknis</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="harga" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Pilihan Paket Fleksibel</h2>
+                <p class="text-gray-600">Pilih solusi yang sesuai dengan skala event Anda.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Starter -->
+                <div class="border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Starter</h3>
+                    <p class="text-gray-500 text-sm mb-6">Untuk Fun Run & Event Komunitas</p>
+                    <div class="text-4xl font-bold text-gray-900 mb-6">IDR 2jt<span class="text-lg text-gray-500 font-normal">/event</span></div>
+                    <ul class="space-y-3 text-gray-600 mb-8">
+                        <li class="flex gap-2"><i class="fa-solid fa-check text-green-500 mt-1"></i> Max 500 Peserta</li>
+                        <li class="flex gap-2"><i class="fa-solid fa-check text-green-500 mt-1"></i> E-Sertifikat</li>
+                        <li class="flex gap-2"><i class="fa-solid fa-check text-green-500 mt-1"></i> Dashboard Basic</li>
+                    </ul>
+                    <a href="#kontak" class="block text-center border border-blue-600 text-blue-600 font-bold py-3 rounded-lg hover:bg-blue-50 transition">Pilih Paket</a>
+                </div>
+                <!-- Pro -->
+                <div class="border-2 border-blue-600 rounded-2xl p-8 shadow-xl relative transform md:-translate-y-4 bg-white">
+                    <div class="absolute top-0 right-0 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">POPULAR</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Professional</h3>
+                    <p class="text-gray-500 text-sm mb-6">Untuk Marathon & Race Serius</p>
+                    <div class="text-4xl font-bold text-gray-900 mb-6">IDR 5jt<span class="text-lg text-gray-500 font-normal">/event</span></div>
+                    <ul class="space-y-3 text-gray-600 mb-8">
+                        <li class="flex gap-2"><i class="fa-solid fa-check text-green-500 mt-1"></i> Max 2.000 Peserta</li>
+                        <li class="flex gap-2"><i class="fa-solid fa-check text-green-500 mt-1"></i> Integrasi Timing Chip</li>
+                        <li class="flex gap-2"><i class="fa-solid fa-check text-green-500 mt-1"></i> WhatsApp Broadcast</li>
+                        <li class="flex gap-2"><i class="fa-solid fa-check text-green-500 mt-1"></i> AI Customer Service</li>
+                        <li class="flex gap-2"><i class="fa-solid fa-check text-green-500 mt-1"></i> Aplikasi RPC & Custom Domain</li>
+                    </ul>
+                    <a href="#kontak" class="block text-center bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700 transition">Pilih Paket</a>
+                </div>
+                <!-- Enterprise -->
+                <div class="border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Enterprise</h3>
+                    <p class="text-gray-500 text-sm mb-6">Untuk Series & Event Besar</p>
+                    <div class="text-4xl font-bold text-gray-900 mb-6">Custom</div>
+                    <ul class="space-y-3 text-gray-600 mb-8">
+                        <li class="flex gap-2"><i class="fa-solid fa-check text-green-500 mt-1"></i> Unlimited Peserta</li>
+                        <li class="flex gap-2"><i class="fa-solid fa-check text-green-500 mt-1"></i> Custom Development</li>
+                        <li class="flex gap-2"><i class="fa-solid fa-check text-green-500 mt-1"></i> Dedicated Support</li>
+                    </ul>
+                    <a href="#kontak" class="block text-center border border-gray-300 text-gray-700 font-bold py-3 rounded-lg hover:bg-gray-50 transition">Hubungi Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Pertanyaan Umum (FAQ)</h2>
+            </div>
+            <div class="space-y-4">
+                <details class="bg-white p-6 rounded-xl shadow-sm group cursor-pointer">
+                    <summary class="flex justify-between items-center font-medium text-lg list-none">
+                        <span>Apakah sistem ini mendukung pembayaran online?</span>
+                        <span class="transition group-open:rotate-180"><i class="fa-solid fa-chevron-down"></i></span>
+                    </summary>
+                    <p class="text-gray-600 mt-4">Ya, Pratama Digitect terintegrasi dengan berbagai payment gateway populer di Indonesia (QRIS, Virtual Account, E-Wallet) untuk verifikasi otomatis.</p>
+                </details>
+                <details class="bg-white p-6 rounded-xl shadow-sm group cursor-pointer">
+                    <summary class="flex justify-between items-center font-medium text-lg list-none">
+                        <span>Bagaimana cara kerja integrasi Timing Chip?</span>
+                        <span class="transition group-open:rotate-180"><i class="fa-solid fa-chevron-down"></i></span>
+                    </summary>
+                    <p class="text-gray-600 mt-4">Kami bekerja sama dengan vendor timing chip terpercaya. Data dari chip akan dikirim langsung ke server kami melalui API untuk ditampilkan di halaman hasil secara real-time.</p>
+                </details>
+                <details class="bg-white p-6 rounded-xl shadow-sm group cursor-pointer">
+                    <summary class="flex justify-between items-center font-medium text-lg list-none">
+                        <span>Apakah bisa custom desain E-Sertifikat?</span>
+                        <span class="transition group-open:rotate-180"><i class="fa-solid fa-chevron-down"></i></span>
+                    </summary>
+                    <p class="text-gray-600 mt-4">Tentu saja. Anda bisa mengunggah template desain sertifikat Anda sendiri, dan sistem kami akan otomatis menempatkan nama, waktu, dan kategori peserta.</p>
+                </details>
+                <details class="bg-white p-6 rounded-xl shadow-sm group cursor-pointer">
+                    <summary class="flex justify-between items-center font-medium text-lg list-none">
+                        <span>Apakah data peserta aman?</span>
+                        <span class="transition group-open:rotate-180"><i class="fa-solid fa-chevron-down"></i></span>
+                    </summary>
+                    <p class="text-gray-600 mt-4">Keamanan data adalah prioritas kami. Kami menggunakan enkripsi standar industri dan backup berkala untuk memastikan data peserta dan transaksi Anda tetap aman.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="kontak" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row">
+                <div class="md:w-1/2 p-12 flex flex-col justify-center">
+                    <h2 class="text-3xl font-bold mb-6 text-gray-900">Siap Mengubah Cara Anda Mengelola Lari?</h2>
+                    <p class="text-gray-600 mb-8">Bergabunglah dengan ratusan organizer lainnya yang telah beralih ke Pratama Digitect. Dapatkan akses demo gratis hari ini.</p>
+                    <form class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Email Bisnis</label>
+                            <input type="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none" placeholder="nama@perusahaan.com">
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700 transition">
+                            Minta Demo Gratis
+                        </button>
+                    </form>
+                </div>
+                <div class="md:w-1/2 bg-blue-600 flex items-center justify-center p-12 text-white">
+                    <div class="text-center">
+                        <i class="fa-solid fa-quote-left text-4xl opacity-50 mb-6"></i>
+                        <p class="text-xl font-medium italic mb-6">"Pratama Digitect sangat membantu kami dalam mengelola Marathon tahunan. Fitur live timing-nya sangat akurat dan disukai peserta."</p>
+                        <div class="font-bold">- Budi Santoso</div>
+                        <div class="text-blue-200 text-sm">Direktur Event Jakarta Run</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <span class="text-2xl font-bold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-flag-checkered"></i> Pratama Digitect
+                    </span>
+                    <p class="mt-2 text-sm">Solusi manajemen Lari terpercaya.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-white transition"><i class="fa-brands fa-instagram text-xl"></i></a>
+                    <a href="#" class="hover:text-white transition"><i class="fa-brands fa-linkedin text-xl"></i></a>
+                    <a href="#" class="hover:text-white transition"><i class="fa-brands fa-twitter text-xl"></i></a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
+                &copy; 2024 Pratama Digitect Systems. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
