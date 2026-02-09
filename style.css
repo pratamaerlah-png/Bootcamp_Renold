@@ -63,3 +63,99 @@ html { scroll-behavior: smooth; }
 .whatsapp-float i {
     margin-top: 15px;
 }
+
+/* Performance optimization for Parallax */
+#hero-bg {
+    will-change: transform;
+}
+
+/* Loading Animations */
+/* Running Man Construction */
+.running-man {
+    width: 40px;
+    height: 60px;
+    position: relative;
+    margin: 0 auto 1.5rem; /* Center & Margin Bottom */
+    animation: run-bob 0.6s infinite ease-in-out;
+}
+
+@keyframes run-bob {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+.running-man .head {
+    width: 12px;
+    height: 12px;
+    background: #2563eb; /* blue-600 */
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+.running-man .body {
+    width: 6px;
+    height: 24px;
+    background: #2563eb;
+    border-radius: 3px;
+    position: absolute;
+    top: 13px;
+    left: 50%;
+    transform: translateX(-50%) skewX(-10deg);
+    z-index: 2;
+}
+.running-man .limb {
+    width: 5px;
+    height: 22px;
+    background: #2563eb;
+    border-radius: 3px;
+    position: absolute;
+    transform-origin: top center;
+}
+.running-man .arm { top: 15px; left: 50%; margin-left: -2.5px; }
+.running-man .leg { top: 35px; left: 50%; margin-left: -2.5px; }
+
+.running-man .shadow {
+    width: 25px;
+    height: 5px;
+    background: #111827;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+    animation: shadow-pulse 0.6s infinite ease-in-out;
+}
+
+/* Limb Animations */
+.running-man .arm.left { animation: run-arm 0.6s infinite ease-in-out alternate; z-index: 1; }
+.running-man .arm.right { animation: run-arm 0.6s infinite ease-in-out alternate-reverse; z-index: 3; }
+.running-man .leg.left { animation: run-leg 0.6s infinite ease-in-out alternate-reverse; z-index: 1; }
+.running-man .leg.right { animation: run-leg 0.6s infinite ease-in-out alternate; z-index: 3; }
+
+@keyframes run-arm {
+    from { transform: rotate(60deg); }
+    to { transform: rotate(-60deg); }
+}
+@keyframes run-leg {
+    from { transform: rotate(-45deg); }
+    to { transform: rotate(45deg); }
+}
+
+@keyframes shadow-pulse {
+    0% { transform: translateX(-50%) scale(1); opacity: 0.6; }
+    50% { transform: translateX(-50%) scale(0.7); opacity: 0.4; }
+    100% { transform: translateX(-50%) scale(1); opacity: 0.6; }
+}
+
+@keyframes slide-right {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+.animate-slide {
+    animation: slide-right 1s infinite linear;
+}
+#loading-screen.fade-out { opacity: 0; pointer-events: none; }

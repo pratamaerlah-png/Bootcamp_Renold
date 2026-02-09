@@ -46,3 +46,39 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(section);
     });
 });
+
+// Parallax Effect for Hero Section
+window.addEventListener('scroll', () => {
+    const heroBg = document.getElementById('hero-bg');
+    if (heroBg) {
+        const scrollPosition = window.pageYOffset;
+        heroBg.style.transform = `translateY(${scrollPosition * 0.5}px)`;
+    }
+});
+
+// Navbar Scroll Effect
+const navbar = document.getElementById('navbar');
+function updateNavbar() {
+    if (window.scrollY > 50) {
+        navbar.classList.remove('bg-transparent', 'border-transparent');
+        navbar.classList.add('bg-black/80', 'backdrop-blur-sm', 'border-white/10');
+    } else {
+        navbar.classList.add('bg-transparent', 'border-transparent');
+        navbar.classList.remove('bg-black/80', 'backdrop-blur-sm', 'border-white/10');
+    }
+}
+if (navbar) {
+    window.addEventListener('scroll', updateNavbar);
+    updateNavbar(); // Check on load
+}
+
+// Loading Screen Logic
+window.addEventListener('load', () => {
+    const loader = document.getElementById('loading-screen');
+    if (loader) {
+        setTimeout(() => {
+            loader.classList.add('fade-out');
+            setTimeout(() => { loader.style.display = 'none'; }, 500);
+        }, 1500); // Tahan minimal 1.5 detik agar animasi terlihat
+    }
+});
