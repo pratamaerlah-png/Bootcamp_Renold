@@ -27,3 +27,22 @@ function switchTab(tab) {
         upcomingTab.className = "px-6 py-2 rounded-md text-sm font-bold text-gray-500 hover:text-gray-700 transition-all";
     }
 }
+
+// Scroll Animation Logic
+document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px" // Trigger sedikit sebelum elemen benar-benar terlihat penuh
+    });
+
+    const sectionsToAnimate = document.querySelectorAll('.reveal');
+    sectionsToAnimate.forEach(section => {
+        observer.observe(section);
+    });
+});
