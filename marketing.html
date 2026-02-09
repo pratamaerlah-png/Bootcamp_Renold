@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratama Digitect - Race Management System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm fixed w-full z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-blue-600 flex items-center gap-2">
+                <i class="fa-solid fa-flag-checkered"></i> Pratama Digitect
+            </a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#fitur" class="text-gray-600 hover:text-blue-600 transition">Fitur</a>
+                <a href="#keunggulan" class="text-gray-600 hover:text-blue-600 transition">Keunggulan</a>
+                <a href="#testimoni" class="text-gray-600 hover:text-blue-600 transition">Testimoni</a>
+                <a href="#kontak" class="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition font-medium">Hubungi Kami</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-32 pb-20 bg-gradient-to-br from-blue-900 to-blue-700 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                Kelola Event Balapan Anda <br> Dengan Lebih Profesional
+            </h1>
+            <p class="text-xl md:text-2xl text-blue-100 mb-10 max-w-3xl mx-auto">
+                Platform all-in-one untuk pendaftaran, manajemen peserta, hingga hasil live timing real-time.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#demo" class="bg-white text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition shadow-lg">
+                    Jadwalkan Demo
+                </a>
+                <a href="#fitur" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-900 transition">
+                    Pelajari Lebih Lanjut
+                </a>
+            </div>
+            
+            <!-- Dashboard Preview Image Placeholder -->
+            <div class="mt-16 mx-auto max-w-5xl bg-white rounded-xl shadow-2xl overflow-hidden p-2">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Dashboard Preview" class="rounded-lg w-full opacity-90">
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="fitur" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Fitur Unggulan</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Kami menyediakan semua alat yang Anda butuhkan untuk menyukseskan event lari, sepeda, atau triathlon Anda.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-10">
+                <!-- Feature 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition border border-gray-100">
+                    <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Manajemen Peserta</h3>
+                    <p class="text-gray-600">Sistem pendaftaran online yang mudah, pengelolaan database peserta, dan pembagian BIB number otomatis.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition border border-gray-100">
+                    <div class="w-14 h-14 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-stopwatch"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Integrasi Live Timing</h3>
+                    <p class="text-gray-600">Terhubung langsung dengan perangkat timing chip Anda untuk menampilkan hasil balapan secara real-time.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition border border-gray-100">
+                    <div class="w-14 h-14 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Analitik & Laporan</h3>
+                    <p class="text-gray-600">Dapatkan wawasan mendalam tentang demografi peserta, pendapatan tiket, dan performa event.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-blue-900 text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-4xl font-bold mb-2">500+</div>
+                    <div class="text-blue-200">Event Terselenggara</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2">1M+</div>
+                    <div class="text-blue-200">Peserta Terdaftar</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2">99.9%</div>
+                    <div class="text-blue-200">Uptime Server</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2">24/7</div>
+                    <div class="text-blue-200">Dukungan Teknis</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="kontak" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row">
+                <div class="md:w-1/2 p-12 flex flex-col justify-center">
+                    <h2 class="text-3xl font-bold mb-6 text-gray-900">Siap Mengubah Cara Anda Mengelola Balapan?</h2>
+                    <p class="text-gray-600 mb-8">Bergabunglah dengan ratusan organizer lainnya yang telah beralih ke Pratama Digitect. Dapatkan akses demo gratis hari ini.</p>
+                    <form class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Email Bisnis</label>
+                            <input type="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none" placeholder="nama@perusahaan.com">
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700 transition">
+                            Minta Demo Gratis
+                        </button>
+                    </form>
+                </div>
+                <div class="md:w-1/2 bg-blue-600 flex items-center justify-center p-12 text-white">
+                    <div class="text-center">
+                        <i class="fa-solid fa-quote-left text-4xl opacity-50 mb-6"></i>
+                        <p class="text-xl font-medium italic mb-6">"Pratama Digitect sangat membantu kami dalam mengelola Marathon tahunan. Fitur live timing-nya sangat akurat dan disukai peserta."</p>
+                        <div class="font-bold">- Budi Santoso</div>
+                        <div class="text-blue-200 text-sm">Direktur Event Jakarta Run</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <span class="text-2xl font-bold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-flag-checkered"></i> Pratama Digitect
+                    </span>
+                    <p class="mt-2 text-sm">Solusi manajemen balapan terpercaya.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-white transition"><i class="fa-brands fa-instagram text-xl"></i></a>
+                    <a href="#" class="hover:text-white transition"><i class="fa-brands fa-linkedin text-xl"></i></a>
+                    <a href="#" class="hover:text-white transition"><i class="fa-brands fa-twitter text-xl"></i></a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
+                &copy; 2024 Pratama Digitect Systems. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
