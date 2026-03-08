@@ -1,0 +1,36 @@
+[17-Oct-2025 21:05:05 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Sabberworm\CSS\Parsing\SourceException' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Parsing/OutputException.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Parsing/OutputException.php on line 8
+[17-Oct-2025 21:05:09 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Sabberworm\CSS\Parsing\SourceException' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Parsing/OutputException.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Parsing/OutputException.php on line 8
+[17-Oct-2025 21:05:47 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Sabberworm\CSS\Parsing\UnexpectedTokenException' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Parsing/UnexpectedEOFException.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Parsing/UnexpectedEOFException.php on line 10
+[17-Oct-2025 21:05:50 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Sabberworm\CSS\Parsing\UnexpectedTokenException' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Parsing/UnexpectedEOFException.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Parsing/UnexpectedEOFException.php on line 10
+[17-Oct-2025 21:05:55 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Sabberworm\CSS\Parsing\SourceException' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Parsing/UnexpectedTokenException.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Parsing/UnexpectedTokenException.php on line 8
+[17-Oct-2025 21:05:58 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Sabberworm\CSS\Parsing\SourceException' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Parsing/UnexpectedTokenException.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Parsing/UnexpectedTokenException.php on line 8
+[17-Oct-2025 21:09:49 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Sabberworm\CSS\Parsing\SourceException' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Parsing/OutputException.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Parsing/OutputException.php on line 8
+[17-Oct-2025 21:10:10 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Sabberworm\CSS\Parsing\UnexpectedTokenException' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Parsing/UnexpectedEOFException.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Parsing/UnexpectedEOFException.php on line 10
+[17-Oct-2025 21:10:14 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Sabberworm\CSS\Parsing\SourceException' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Parsing/UnexpectedTokenException.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Parsing/UnexpectedTokenException.php on line 8

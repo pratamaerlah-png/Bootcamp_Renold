@@ -1,0 +1,132 @@
+[17-Oct-2025 20:41:20 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameReflower\AbstractFrameReflower' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/Page.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/Page.php on line 18
+[17-Oct-2025 20:41:24 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameReflower\AbstractFrameReflower' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/Page.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/Page.php on line 18
+[17-Oct-2025 20:41:27 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameReflower\AbstractFrameReflower' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/Text.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/Text.php on line 21
+[17-Oct-2025 20:41:32 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameReflower\AbstractFrameReflower' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/Text.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/Text.php on line 21
+[17-Oct-2025 20:43:59 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameReflower\AbstractFrameReflower' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/Block.php:22
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/Block.php on line 22
+[17-Oct-2025 20:44:03 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameReflower\AbstractFrameReflower' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/Block.php:22
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/Block.php on line 22
+[17-Oct-2025 20:44:06 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameReflower\AbstractFrameReflower' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/Image.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/Image.php on line 18
+[17-Oct-2025 20:44:10 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameReflower\AbstractFrameReflower' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/Image.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/Image.php on line 18
+[17-Oct-2025 20:44:13 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameReflower\AbstractFrameReflower' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/Table.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/Table.php on line 18
+[17-Oct-2025 20:44:17 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameReflower\AbstractFrameReflower' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/Table.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/Table.php on line 18
+[17-Oct-2025 20:46:13 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameReflower\AbstractFrameReflower' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/Inline.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/Inline.php on line 18
+[17-Oct-2025 20:55:32 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameReflower\AbstractFrameReflower' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/Page.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/Page.php on line 18
+[17-Oct-2025 20:55:35 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameReflower\AbstractFrameReflower' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/Text.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/Text.php on line 21
+[17-Oct-2025 20:56:46 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameReflower\AbstractFrameReflower' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/Block.php:22
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/Block.php on line 22
+[17-Oct-2025 20:56:49 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameReflower\AbstractFrameReflower' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/Image.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/Image.php on line 18
+[17-Oct-2025 20:56:52 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameReflower\AbstractFrameReflower' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/Table.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/Table.php on line 18
+[17-Oct-2025 20:57:41 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameReflower\AbstractFrameReflower' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/Inline.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/Inline.php on line 18
+[17-Oct-2025 20:57:55 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameReflower\AbstractFrameReflower' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/Inline.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/Inline.php on line 18
+[17-Oct-2025 20:59:01 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameReflower\AbstractFrameReflower' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/TableRow.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/TableRow.php on line 19
+[17-Oct-2025 20:59:04 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameReflower\AbstractFrameReflower' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/TableRow.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/TableRow.php on line 19
+[17-Oct-2025 20:59:54 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameReflower\Block' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/TableCell.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/TableCell.php on line 20
+[17-Oct-2025 20:59:57 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameReflower\Block' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/TableCell.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/TableCell.php on line 20
+[17-Oct-2025 21:00:30 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameReflower\AbstractFrameReflower' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/ListBullet.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/ListBullet.php on line 17
+[17-Oct-2025 21:00:33 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameReflower\AbstractFrameReflower' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/ListBullet.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/ListBullet.php on line 17
+[17-Oct-2025 21:01:30 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameReflower\AbstractFrameReflower' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/TableRowGroup.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/TableRowGroup.php on line 19
+[17-Oct-2025 21:01:33 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameReflower\AbstractFrameReflower' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/TableRowGroup.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/TableRowGroup.php on line 19
+[17-Oct-2025 21:03:54 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameReflower\AbstractFrameReflower' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/NullFrameReflower.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/NullFrameReflower.php on line 17
+[17-Oct-2025 21:03:58 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameReflower\AbstractFrameReflower' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/NullFrameReflower.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/NullFrameReflower.php on line 17
+[17-Oct-2025 21:06:20 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameReflower\AbstractFrameReflower' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/TableRow.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/TableRow.php on line 19
+[17-Oct-2025 21:06:46 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameReflower\Block' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/TableCell.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/TableCell.php on line 20
+[17-Oct-2025 21:07:04 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameReflower\AbstractFrameReflower' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/ListBullet.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/ListBullet.php on line 17
+[17-Oct-2025 21:08:00 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameReflower\AbstractFrameReflower' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/TableRowGroup.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/TableRowGroup.php on line 19
+[17-Oct-2025 21:09:13 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameReflower\AbstractFrameReflower' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/NullFrameReflower.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameReflower/NullFrameReflower.php on line 17

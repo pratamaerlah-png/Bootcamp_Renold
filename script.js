@@ -187,6 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
 let currentTestiIndex = 0;
 const testimonialSlides = document.querySelectorAll('.testimonial-slide');
 const testimonialDots = document.querySelectorAll('#testimonial-slider + div button');
+let testimonialInterval;
 
 function showTestimonial(index) {
     if (!testimonialSlides.length) return;
@@ -211,10 +212,24 @@ function showTestimonial(index) {
     currentTestiIndex = index;
 }
 
+function nextTestimonial() {
+    let nextIndex = (currentTestiIndex + 1) % testimonialSlides.length;
+    showTestimonial(nextIndex);
+    resetTestimonialTimer();
+}
+
+function prevTestimonial() {
+    let prevIndex = (currentTestiIndex - 1 + testimonialSlides.length) % testimonialSlides.length;
+    showTestimonial(prevIndex);
+    resetTestimonialTimer();
+}
+
+function resetTestimonialTimer() {
+    clearInterval(testimonialInterval);
+    testimonialInterval = setInterval(nextTestimonial, 5000);
+}
+
 // Auto slide every 5 seconds
 if (testimonialSlides.length > 1) {
-    setInterval(() => {
-        let nextIndex = (currentTestiIndex + 1) % testimonialSlides.length;
-        showTestimonial(nextIndex);
-    }, 5000);
+    resetTestimonialTimer();
 }

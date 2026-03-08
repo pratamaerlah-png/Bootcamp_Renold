@@ -1,0 +1,96 @@
+[17-Oct-2025 20:40:03 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Positioner\AbstractPositioner' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Positioner/Block.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Positioner/Block.php on line 16
+[17-Oct-2025 20:40:07 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Positioner\AbstractPositioner' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Positioner/Block.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Positioner/Block.php on line 16
+[17-Oct-2025 20:40:10 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Positioner\Absolute' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Positioner/Fixed.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Positioner/Fixed.php on line 15
+[17-Oct-2025 20:40:14 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Positioner\Absolute' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Positioner/Fixed.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Positioner/Fixed.php on line 15
+[17-Oct-2025 20:40:53 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Positioner\AbstractPositioner' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Positioner/Inline.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Positioner/Inline.php on line 19
+[17-Oct-2025 20:40:56 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Positioner\AbstractPositioner' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Positioner/Inline.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Positioner/Inline.php on line 19
+[17-Oct-2025 20:44:20 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Positioner\AbstractPositioner' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Positioner/Absolute.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Positioner/Absolute.php on line 15
+[17-Oct-2025 20:44:24 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Positioner\AbstractPositioner' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Positioner/Absolute.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Positioner/Absolute.php on line 15
+[17-Oct-2025 20:44:27 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Positioner\AbstractPositioner' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Positioner/TableRow.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Positioner/TableRow.php on line 16
+[17-Oct-2025 20:44:31 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Positioner\AbstractPositioner' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Positioner/TableRow.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Positioner/TableRow.php on line 16
+[17-Oct-2025 20:54:51 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Positioner\AbstractPositioner' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Positioner/Block.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Positioner/Block.php on line 16
+[17-Oct-2025 20:54:54 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Positioner\Absolute' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Positioner/Fixed.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Positioner/Fixed.php on line 15
+[17-Oct-2025 20:55:17 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Positioner\AbstractPositioner' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Positioner/Inline.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Positioner/Inline.php on line 19
+[17-Oct-2025 20:56:56 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Positioner\AbstractPositioner' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Positioner/Absolute.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Positioner/Absolute.php on line 15
+[17-Oct-2025 20:56:59 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Positioner\AbstractPositioner' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Positioner/TableRow.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Positioner/TableRow.php on line 16
+[17-Oct-2025 20:57:45 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Positioner\AbstractPositioner' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Positioner/TableCell.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Positioner/TableCell.php on line 18
+[17-Oct-2025 20:57:59 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Positioner\AbstractPositioner' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Positioner/TableCell.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Positioner/TableCell.php on line 18
+[17-Oct-2025 20:58:02 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Positioner\AbstractPositioner' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Positioner/TableCell.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Positioner/TableCell.php on line 18
+[17-Oct-2025 20:58:32 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Positioner\AbstractPositioner' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Positioner/ListBullet.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Positioner/ListBullet.php on line 17
+[17-Oct-2025 20:58:35 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Positioner\AbstractPositioner' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Positioner/ListBullet.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Positioner/ListBullet.php on line 17
+[17-Oct-2025 21:00:43 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Positioner\AbstractPositioner' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Positioner/NullPositioner.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Positioner/NullPositioner.php on line 16
+[17-Oct-2025 21:00:47 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Positioner\AbstractPositioner' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Positioner/NullPositioner.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Positioner/NullPositioner.php on line 16
+[17-Oct-2025 21:06:05 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Positioner\AbstractPositioner' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Positioner/ListBullet.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Positioner/ListBullet.php on line 17
+[17-Oct-2025 21:07:11 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Positioner\AbstractPositioner' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Positioner/NullPositioner.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Positioner/NullPositioner.php on line 16

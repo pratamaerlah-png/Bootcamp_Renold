@@ -82,6 +82,7 @@ $sql = "CREATE TABLE IF NOT EXISTS testimonials (
     role VARCHAR(100) NOT NULL,
     content TEXT NOT NULL,
     photo_url VARCHAR(255),
+    sort_order INT(11) DEFAULT 0,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 )";
 exec_sql($conn, $sql, "Tabel 'testimonials' (Testimoni)");
@@ -94,6 +95,22 @@ $sql = "CREATE TABLE IF NOT EXISTS visitor_stats (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 )";
 exec_sql($conn, $sql, "Tabel 'visitor_stats' (Pengunjung)");
+
+// 8. Buat Tabel Invoices
+$sql = "CREATE TABLE IF NOT EXISTS invoices (
+    id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    invoice_number VARCHAR(50) NOT NULL UNIQUE,
+    client_name VARCHAR(100) NOT NULL,
+    client_email VARCHAR(100) NOT NULL,
+    client_phone VARCHAR(20),
+    invoice_date DATE NOT NULL,
+    due_date DATE NOT NULL,
+    total_amount DECIMAL(15, 2) NOT NULL,
+    status ENUM('unpaid', 'paid', 'cancelled') DEFAULT 'unpaid',
+    items_json TEXT, -- Simpan item dalam JSON sederhana
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+)";
+exec_sql($conn, $sql, "Tabel 'invoices' (Tagihan)");
 
 echo "<hr>";
 echo "<h3>Mengisi Data Dummy (Sampel)...</h3>";

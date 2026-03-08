@@ -1,0 +1,60 @@
+[17-Oct-2025 21:01:37 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'Sabberworm\CSS\Renderable' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/CSSList/CSSList.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/CSSList/CSSList.php on line 32
+[17-Oct-2025 21:01:40 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'Sabberworm\CSS\Renderable' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/CSSList/CSSList.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/CSSList/CSSList.php on line 32
+[17-Oct-2025 21:02:34 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Sabberworm\CSS\CSSList\CSSBlockList' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/CSSList/Document.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/CSSList/Document.php on line 17
+[17-Oct-2025 21:02:37 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Sabberworm\CSS\CSSList\CSSBlockList' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/CSSList/Document.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/CSSList/Document.php on line 17
+[17-Oct-2025 21:02:41 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Sabberworm\CSS\CSSList\CSSList' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/CSSList/KeyFrame.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/CSSList/KeyFrame.php on line 8
+[17-Oct-2025 21:02:44 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Sabberworm\CSS\CSSList\CSSList' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/CSSList/KeyFrame.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/CSSList/KeyFrame.php on line 8
+[17-Oct-2025 21:04:23 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Sabberworm\CSS\CSSList\CSSList' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/CSSList/CSSBlockList.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/CSSList/CSSBlockList.php on line 19
+[17-Oct-2025 21:04:27 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Sabberworm\CSS\CSSList\CSSList' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/CSSList/CSSBlockList.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/CSSList/CSSBlockList.php on line 19
+[17-Oct-2025 21:04:58 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Sabberworm\CSS\CSSList\CSSBlockList' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/CSSList/AtRuleBlockList.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/CSSList/AtRuleBlockList.php on line 11
+[17-Oct-2025 21:05:02 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Sabberworm\CSS\CSSList\CSSBlockList' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/CSSList/AtRuleBlockList.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/CSSList/AtRuleBlockList.php on line 11
+[17-Oct-2025 21:08:03 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'Sabberworm\CSS\Renderable' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/CSSList/CSSList.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/CSSList/CSSList.php on line 32
+[17-Oct-2025 21:08:31 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Sabberworm\CSS\CSSList\CSSBlockList' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/CSSList/Document.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/CSSList/Document.php on line 17
+[17-Oct-2025 21:08:35 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Sabberworm\CSS\CSSList\CSSList' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/CSSList/KeyFrame.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/CSSList/KeyFrame.php on line 8
+[17-Oct-2025 21:09:27 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Sabberworm\CSS\CSSList\CSSList' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/CSSList/CSSBlockList.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/CSSList/CSSBlockList.php on line 19
+[17-Oct-2025 21:09:46 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Sabberworm\CSS\CSSList\CSSBlockList' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/CSSList/AtRuleBlockList.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/CSSList/AtRuleBlockList.php on line 11

@@ -1,0 +1,180 @@
+[24-Oct-2025 07:30:41 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Table\Table' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/cvt.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/cvt.php on line 16
+[24-Oct-2025 07:30:44 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Table\Table' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/cvt.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/cvt.php on line 16
+[24-Oct-2025 07:30:48 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Table\Table' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/os2.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/os2.php on line 16
+[24-Oct-2025 07:30:51 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Table\Table' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/os2.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/os2.php on line 16
+[24-Oct-2025 07:31:02 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Table\Table' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/cmap.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/cmap.php on line 16
+[24-Oct-2025 07:31:06 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Table\Table' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/cmap.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/cmap.php on line 16
+[24-Oct-2025 07:31:09 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Table\Table' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/fpgm.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/fpgm.php on line 16
+[24-Oct-2025 07:31:12 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Table\Table' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/fpgm.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/fpgm.php on line 16
+[24-Oct-2025 07:31:16 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Table\Table' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/glyf.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/glyf.php on line 20
+[24-Oct-2025 07:31:20 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Table\Table' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/glyf.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/glyf.php on line 20
+[24-Oct-2025 07:31:23 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Table\Table' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/head.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/head.php on line 17
+[24-Oct-2025 07:31:27 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Table\Table' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/head.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/head.php on line 17
+[24-Oct-2025 07:31:30 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Table\Table' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/hhea.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/hhea.php on line 16
+[24-Oct-2025 07:31:34 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Table\Table' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/hhea.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/hhea.php on line 16
+[24-Oct-2025 07:31:37 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Table\Table' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/hmtx.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/hmtx.php on line 16
+[24-Oct-2025 07:31:41 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Table\Table' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/hmtx.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/hmtx.php on line 16
+[24-Oct-2025 07:31:44 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Table\Table' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/kern.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/kern.php on line 16
+[24-Oct-2025 07:31:48 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Table\Table' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/kern.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/kern.php on line 16
+[24-Oct-2025 07:31:52 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Table\Table' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/loca.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/loca.php on line 16
+[24-Oct-2025 07:31:55 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Table\Table' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/loca.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/loca.php on line 16
+[24-Oct-2025 07:31:59 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Table\Table' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/maxp.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/maxp.php on line 16
+[24-Oct-2025 07:32:02 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Table\Table' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/maxp.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/maxp.php on line 16
+[24-Oct-2025 07:32:06 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Table\Table' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/name.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/name.php on line 18
+[24-Oct-2025 07:32:09 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Table\Table' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/name.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/name.php on line 18
+[24-Oct-2025 07:32:13 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Table\Table' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/post.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/post.php on line 17
+[24-Oct-2025 07:32:16 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Table\Table' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/post.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/post.php on line 17
+[24-Oct-2025 07:32:20 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Table\Table' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/prep.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/prep.php on line 18
+[24-Oct-2025 07:32:24 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Table\Table' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/prep.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/prep.php on line 18
+[24-Oct-2025 07:32:27 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\BinaryStream' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/nameRecord.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/nameRecord.php on line 17
+[24-Oct-2025 07:32:30 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\BinaryStream' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/nameRecord.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/nameRecord.php on line 17
+[24-Oct-2025 07:36:04 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Table\Table' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/cvt.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/cvt.php on line 16
+[24-Oct-2025 07:36:07 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Table\Table' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/os2.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/os2.php on line 16
+[24-Oct-2025 07:36:11 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Table\Table' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/cmap.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/cmap.php on line 16
+[24-Oct-2025 07:36:14 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Table\Table' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/fpgm.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/fpgm.php on line 16
+[24-Oct-2025 07:36:18 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Table\Table' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/glyf.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/glyf.php on line 20
+[24-Oct-2025 07:36:21 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Table\Table' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/head.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/head.php on line 17
+[24-Oct-2025 07:36:24 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Table\Table' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/hhea.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/hhea.php on line 16
+[24-Oct-2025 07:36:28 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Table\Table' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/hmtx.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/hmtx.php on line 16
+[24-Oct-2025 07:36:31 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Table\Table' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/kern.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/kern.php on line 16
+[24-Oct-2025 07:36:35 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Table\Table' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/loca.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/loca.php on line 16
+[24-Oct-2025 07:36:38 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Table\Table' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/maxp.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/maxp.php on line 16
+[24-Oct-2025 07:36:42 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Table\Table' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/name.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/name.php on line 18
+[24-Oct-2025 07:36:45 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Table\Table' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/post.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/post.php on line 17
+[24-Oct-2025 07:36:49 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Table\Table' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/prep.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/prep.php on line 18
+[24-Oct-2025 07:36:52 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\BinaryStream' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/nameRecord.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Type/nameRecord.php on line 17

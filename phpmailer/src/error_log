@@ -1,0 +1,52 @@
+[11-Sep-2025 20:15:40 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'PHPMailer\PHPMailer\OAuthTokenProvider' not found in /home/berj5937/public_html/phpmailer/src/OAuth.php:36
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/phpmailer/src/OAuth.php on line 36
+[11-Sep-2025 20:15:50 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'PHPMailer\PHPMailer\OAuthTokenProvider' not found in /home/berj5937/public_html/phpmailer/src/OAuth.php:36
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/phpmailer/src/OAuth.php on line 36
+[11-Sep-2025 20:16:00 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'PHPMailer\PHPMailer\OAuthTokenProvider' not found in /home/berj5937/public_html/phpmailer/src/OAuth.php:36
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/phpmailer/src/OAuth.php on line 36
+[11-Sep-2025 20:16:06 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'PHPMailer\PHPMailer\OAuthTokenProvider' not found in /home/berj5937/public_html/phpmailer/src/OAuth.php:36
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/phpmailer/src/OAuth.php on line 36
+[11-Sep-2025 20:16:15 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'PHPMailer\PHPMailer\OAuthTokenProvider' not found in /home/berj5937/public_html/phpmailer/src/OAuth.php:36
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/phpmailer/src/OAuth.php on line 36
+[12-Sep-2025 12:36:01 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'PHPMailer\PHPMailer\OAuthTokenProvider' not found in /home/berj5937/public_html/phpmailer/src/OAuth.php:36
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/phpmailer/src/OAuth.php on line 36
+[16-Sep-2025 14:38:44 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'PHPMailer\PHPMailer\OAuthTokenProvider' not found in /home/berj5937/public_html/phpmailer/src/OAuth.php:36
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/phpmailer/src/OAuth.php on line 36
+[26-Sep-2025 06:46:58 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'PHPMailer\PHPMailer\OAuthTokenProvider' not found in /home/berj5937/public_html/phpmailer/src/OAuth.php:36
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/phpmailer/src/OAuth.php on line 36
+[26-Sep-2025 06:55:29 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'PHPMailer\PHPMailer\OAuthTokenProvider' not found in /home/berj5937/public_html/phpmailer/src/OAuth.php:36
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/phpmailer/src/OAuth.php on line 36
+[02-Oct-2025 06:43:42 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'PHPMailer\PHPMailer\OAuthTokenProvider' not found in /home/berj5937/public_html/phpmailer/src/OAuth.php:36
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/phpmailer/src/OAuth.php on line 36
+[31-Oct-2025 10:47:38 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'PHPMailer\PHPMailer\OAuthTokenProvider' not found in /home/berj5937/public_html/phpmailer/src/OAuth.php:36
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/phpmailer/src/OAuth.php on line 36
+[06-Nov-2025 23:05:47 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'PHPMailer\PHPMailer\OAuthTokenProvider' not found in /home/berj5937/public_html/phpmailer/src/OAuth.php:36
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/phpmailer/src/OAuth.php on line 36
+[06-Nov-2025 23:07:44 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'PHPMailer\PHPMailer\OAuthTokenProvider' not found in /home/berj5937/public_html/phpmailer/src/OAuth.php:36
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/phpmailer/src/OAuth.php on line 36

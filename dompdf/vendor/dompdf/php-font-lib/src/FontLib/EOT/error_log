@@ -1,0 +1,24 @@
+[20-Oct-2025 18:25:08 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\TrueType\File' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/EOT/File.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/EOT/File.php on line 15
+[20-Oct-2025 18:25:50 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Header' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/EOT/Header.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/EOT/Header.php on line 20
+[20-Oct-2025 18:32:18 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\TrueType\File' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/EOT/File.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/EOT/File.php on line 15
+[20-Oct-2025 18:32:21 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\TrueType\File' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/EOT/File.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/EOT/File.php on line 15
+[20-Oct-2025 18:33:28 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Header' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/EOT/Header.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/EOT/Header.php on line 20
+[20-Oct-2025 18:33:31 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Header' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/EOT/Header.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/EOT/Header.php on line 20

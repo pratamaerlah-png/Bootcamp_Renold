@@ -1,0 +1,96 @@
+[17-Oct-2025 20:38:02 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Renderer\AbstractRenderer' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer/Text.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer/Text.php on line 17
+[17-Oct-2025 20:38:06 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Renderer\AbstractRenderer' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer/Text.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer/Text.php on line 17
+[17-Oct-2025 20:38:37 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Renderer\AbstractRenderer' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer/Block.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer/Block.php on line 17
+[17-Oct-2025 20:38:40 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Renderer\AbstractRenderer' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer/Block.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer/Block.php on line 17
+[17-Oct-2025 20:38:44 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Renderer\Block' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer/Image.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer/Image.php on line 18
+[17-Oct-2025 20:38:47 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Renderer\Block' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer/Image.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer/Image.php on line 18
+[17-Oct-2025 20:39:29 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Renderer\AbstractRenderer' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer/Inline.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer/Inline.php on line 16
+[17-Oct-2025 20:39:33 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Renderer\AbstractRenderer' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer/Inline.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer/Inline.php on line 16
+[17-Oct-2025 20:41:00 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Renderer\Block' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer/TableRow.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer/TableRow.php on line 14
+[17-Oct-2025 20:41:03 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Renderer\Block' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer/TableRow.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer/TableRow.php on line 14
+[17-Oct-2025 20:41:35 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Renderer\Block' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer/TableCell.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer/TableCell.php on line 18
+[17-Oct-2025 20:41:39 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Renderer\Block' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer/TableCell.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer/TableCell.php on line 18
+[17-Oct-2025 20:44:34 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Renderer\AbstractRenderer' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer/ListBullet.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer/ListBullet.php on line 20
+[17-Oct-2025 20:44:37 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Renderer\AbstractRenderer' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer/ListBullet.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer/ListBullet.php on line 20
+[17-Oct-2025 20:53:43 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Renderer\AbstractRenderer' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer/Text.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer/Text.php on line 17
+[17-Oct-2025 20:54:00 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Renderer\AbstractRenderer' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer/Block.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer/Block.php on line 17
+[17-Oct-2025 20:54:04 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Renderer\Block' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer/Image.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer/Image.php on line 18
+[17-Oct-2025 20:54:30 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Renderer\AbstractRenderer' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer/Inline.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer/Inline.php on line 16
+[17-Oct-2025 20:55:21 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Renderer\Block' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer/TableRow.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer/TableRow.php on line 14
+[17-Oct-2025 20:55:39 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Renderer\Block' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer/TableCell.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer/TableCell.php on line 18
+[17-Oct-2025 20:57:03 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Renderer\AbstractRenderer' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer/ListBullet.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer/ListBullet.php on line 20
+[17-Oct-2025 20:59:08 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Renderer\Block' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer/TableRowGroup.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer/TableRowGroup.php on line 14
+[17-Oct-2025 20:59:12 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Renderer\Block' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer/TableRowGroup.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer/TableRowGroup.php on line 14
+[17-Oct-2025 21:06:23 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Renderer\Block' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer/TableRowGroup.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer/TableRowGroup.php on line 14

@@ -1,0 +1,12 @@
+[20-Oct-2025 18:27:10 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'Masterminds\HTML5\Serializer\RulesInterface' not found in /home/berj5937/public_html/dompdf/vendor/masterminds/html5/src/HTML5/Serializer/OutputRules.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/masterminds/html5/src/HTML5/Serializer/OutputRules.php on line 17
+[20-Oct-2025 18:36:40 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'Masterminds\HTML5\Serializer\RulesInterface' not found in /home/berj5937/public_html/dompdf/vendor/masterminds/html5/src/HTML5/Serializer/OutputRules.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/masterminds/html5/src/HTML5/Serializer/OutputRules.php on line 17
+[20-Oct-2025 18:36:45 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'Masterminds\HTML5\Serializer\RulesInterface' not found in /home/berj5937/public_html/dompdf/vendor/masterminds/html5/src/HTML5/Serializer/OutputRules.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/masterminds/html5/src/HTML5/Serializer/OutputRules.php on line 17

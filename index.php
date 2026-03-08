@@ -18,6 +18,24 @@ if ($check_visit->num_rows == 0) {
     $conn->query("INSERT INTO visitor_stats (visit_date, ip_address) VALUES ('$today_date', '$visitor_ip')");
 }
 
+// --- CONTACT FORM HANDLER ---
+$contact_msg = '';
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['send_contact'])) {
+    $email_pengirim = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+    $tujuan = "pratamaerlah@gmail.com";
+    $subjek = "New Lead: Request Consultation from Website";
+    $pesan = "Ada permintaan konsultasi baru dari website.\n\nEmail Klien: " . $email_pengirim . "\n\nMohon segera di-follow up.";
+    $headers = "From: no-reply@pratamadigitect.com" . "\r\n" .
+               "Reply-To: " . $email_pengirim . "\r\n" .
+               "X-Mailer: PHP/" . phpversion();
+
+    if (mail($tujuan, $subjek, $pesan, $headers)) {
+        $contact_msg = 'success';
+    } else {
+        $contact_msg = 'failed';
+    }
+}
+
 // --- AUTO UPDATE STATUS ---
 // Jika waktu event sudah lewat dari sekarang, ubah status jadi 'completed'
 $conn->query("UPDATE events SET status = 'completed' WHERE event_date < NOW() AND status = 'upcoming'");
@@ -46,7 +64,7 @@ if ($check_table && $check_table->num_rows > 0) {
 }
 
 // Ambil Data Testimoni (Semua)
-$sql_testi = "SELECT * FROM testimonials ORDER BY id DESC LIMIT 5"; // Ambil 5 terbaru
+$sql_testi = "SELECT * FROM testimonials ORDER BY sort_order ASC, id DESC LIMIT 5"; // Ambil 5 teratas sesuai urutan
 $result_testi = $conn->query($sql_testi);
 $testimonials = [];
 if ($result_testi && $result_testi->num_rows > 0) {
@@ -720,12 +738,19 @@ if ($result_testi && $result_testi->num_rows > 0) {
                 <div class="md:w-1/2 p-12 flex flex-col justify-center">
                     <h2 class="text-3xl font-bold mb-6 text-white">Ready to Build Your Platform?</h2>
                     <p class="text-gray-400 mb-8">Diskusikan kebutuhan teknis event Anda dengan tim engineer kami. Dapatkan blueprint sistem yang sesuai dengan skala bisnis Anda.</p>
-                    <form class="space-y-4">
+                    
+                    <?php if ($contact_msg == 'success'): ?>
+                        <div class="bg-green-500/20 border border-green-500 text-green-400 p-4 rounded-lg mb-6">Permintaan terkirim! Tim kami akan menghubungi Anda segera.</div>
+                    <?php elseif ($contact_msg == 'failed'): ?>
+                        <div class="bg-red-500/20 border border-red-500 text-red-400 p-4 rounded-lg mb-6">Gagal mengirim. Silakan coba lagi atau hubungi WhatsApp kami.</div>
+                    <?php endif; ?>
+
+                    <form class="space-y-4" method="POST" action="index.php#kontak">
                         <div>
                             <label class="block text-sm font-medium text-gray-400 mb-1">Email Bisnis</label>
-                            <input type="email" class="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-900 text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none" placeholder="nama@perusahaan.com">
+                            <input type="email" name="email" class="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-900 text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none" placeholder="nama@perusahaan.com" required>
                         </div>
-                        <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700 transition">
+                        <button type="submit" name="send_contact" class="w-full bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700 transition">
                             Request Consultation
                         </button>
                     </form>
@@ -734,6 +759,14 @@ if ($result_testi && $result_testi->num_rows > 0) {
                     <div class="text-center w-full relative">
                         <i class="fa-solid fa-quote-left text-4xl opacity-50 mb-6 block"></i>
                         
+                        <!-- Navigation Arrows -->
+                        <button onclick="prevTestimonial()" class="absolute left-0 top-1/2 -translate-y-1/2 -ml-4 md:-ml-12 text-white/30 hover:text-white transition z-20 p-2">
+                            <i class="fa-solid fa-chevron-left text-3xl"></i>
+                        </button>
+                        <button onclick="nextTestimonial()" class="absolute right-0 top-1/2 -translate-y-1/2 -mr-4 md:-mr-12 text-white/30 hover:text-white transition z-20 p-2">
+                            <i class="fa-solid fa-chevron-right text-3xl"></i>
+                        </button>
+
                         <div id="testimonial-slider" class="relative overflow-hidden min-h-[200px]">
                             <?php if (!empty($testimonials)): ?>
                                 <?php foreach ($testimonials as $index => $testi): ?>
@@ -742,7 +775,11 @@ if ($result_testi && $result_testi->num_rows > 0) {
                                     
                                     <div class="flex items-center gap-4">
                                         <?php if (!empty($testi['photo_url'])): ?>
-                                        <img src="<?= htmlspecialchars($testi['photo_url']) ?>" alt="<?= htmlspecialchars($testi['name']) ?>" class="w-12 h-12 rounded-full object-cover border-2 border-white/30">
+                                            <?php 
+                                            // Cek apakah URL eksternal atau path lokal
+                                            $img_src = (strpos($testi['photo_url'], 'http') === 0) ? $testi['photo_url'] : $testi['photo_url'];
+                                            ?>
+                                            <img src="<?= htmlspecialchars($img_src) ?>" alt="<?= htmlspecialchars($testi['name']) ?>" class="w-12 h-12 rounded-full object-cover border-2 border-white/30">
                                         <?php else: ?>
                                         <div class="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center text-white font-bold border-2 border-white/30">
                                             <?= strtoupper(substr($testi['name'], 0, 1)) ?>

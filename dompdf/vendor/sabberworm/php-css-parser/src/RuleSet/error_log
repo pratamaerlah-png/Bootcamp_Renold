@@ -1,0 +1,36 @@
+[17-Oct-2025 21:02:06 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'Sabberworm\CSS\Renderable' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/RuleSet/RuleSet.php:23
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/RuleSet/RuleSet.php on line 23
+[17-Oct-2025 21:02:10 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'Sabberworm\CSS\Renderable' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/RuleSet/RuleSet.php:23
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/RuleSet/RuleSet.php on line 23
+[17-Oct-2025 21:03:11 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Sabberworm\CSS\RuleSet\RuleSet' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/RuleSet/AtRuleSet.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/RuleSet/AtRuleSet.php on line 14
+[17-Oct-2025 21:03:15 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Sabberworm\CSS\RuleSet\RuleSet' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/RuleSet/AtRuleSet.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/RuleSet/AtRuleSet.php on line 14
+[17-Oct-2025 21:05:26 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Sabberworm\CSS\RuleSet\RuleSet' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/RuleSet/DeclarationBlock.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/RuleSet/DeclarationBlock.php on line 29
+[17-Oct-2025 21:05:29 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Sabberworm\CSS\RuleSet\RuleSet' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/RuleSet/DeclarationBlock.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/RuleSet/DeclarationBlock.php on line 29
+[17-Oct-2025 21:08:17 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'Sabberworm\CSS\Renderable' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/RuleSet/RuleSet.php:23
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/RuleSet/RuleSet.php on line 23
+[17-Oct-2025 21:08:50 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Sabberworm\CSS\RuleSet\RuleSet' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/RuleSet/AtRuleSet.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/RuleSet/AtRuleSet.php on line 14
+[17-Oct-2025 21:10:00 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Sabberworm\CSS\RuleSet\RuleSet' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/RuleSet/DeclarationBlock.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/RuleSet/DeclarationBlock.php on line 29

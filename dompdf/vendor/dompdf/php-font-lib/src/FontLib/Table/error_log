@@ -1,0 +1,24 @@
+[20-Oct-2025 18:26:02 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\BinaryStream' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Table.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Table.php on line 18
+[20-Oct-2025 18:27:24 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\BinaryStream' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/DirectoryEntry.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/DirectoryEntry.php on line 18
+[20-Oct-2025 18:33:50 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\BinaryStream' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Table.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Table.php on line 18
+[20-Oct-2025 18:33:54 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\BinaryStream' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Table.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/Table.php on line 18
+[20-Oct-2025 18:37:11 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\BinaryStream' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/DirectoryEntry.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/DirectoryEntry.php on line 18
+[20-Oct-2025 18:37:16 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\BinaryStream' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/DirectoryEntry.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Table/DirectoryEntry.php on line 18

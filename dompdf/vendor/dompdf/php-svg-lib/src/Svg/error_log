@@ -1,0 +1,24 @@
+[17-Oct-2025 20:41:07 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\AbstractTag' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Document.php:30
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Document.php on line 30
+[17-Oct-2025 20:41:10 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\AbstractTag' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Document.php:30
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Document.php on line 30
+[17-Oct-2025 20:55:24 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\AbstractTag' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Document.php:30
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Document.php on line 30
+[17-Oct-2025 20:58:39 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Style' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/DefaultStyle.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/DefaultStyle.php on line 10
+[17-Oct-2025 20:58:43 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Style' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/DefaultStyle.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/DefaultStyle.php on line 10
+[17-Oct-2025 21:06:08 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Style' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/DefaultStyle.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/DefaultStyle.php on line 10

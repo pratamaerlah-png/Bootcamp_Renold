@@ -1,0 +1,48 @@
+[20-Oct-2025 18:26:24 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\BinaryStream' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/TrueType/File.php:24
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/TrueType/File.php on line 24
+[20-Oct-2025 18:26:46 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Header' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/TrueType/Header.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/TrueType/Header.php on line 15
+[20-Oct-2025 18:27:17 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\BinaryStream' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/TrueType/Collection.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/TrueType/Collection.php on line 20
+[20-Oct-2025 18:28:03 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Table\DirectoryEntry' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/TrueType/TableDirectoryEntry.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/TrueType/TableDirectoryEntry.php on line 17
+[20-Oct-2025 18:35:07 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\BinaryStream' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/TrueType/File.php:24
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/TrueType/File.php on line 24
+[20-Oct-2025 18:35:11 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\BinaryStream' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/TrueType/File.php:24
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/TrueType/File.php on line 24
+[20-Oct-2025 18:35:52 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Header' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/TrueType/Header.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/TrueType/Header.php on line 15
+[20-Oct-2025 18:35:56 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Header' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/TrueType/Header.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/TrueType/Header.php on line 15
+[20-Oct-2025 18:36:56 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\BinaryStream' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/TrueType/Collection.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/TrueType/Collection.php on line 20
+[20-Oct-2025 18:37:00 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\BinaryStream' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/TrueType/Collection.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/TrueType/Collection.php on line 20
+[20-Oct-2025 18:38:56 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Table\DirectoryEntry' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/TrueType/TableDirectoryEntry.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/TrueType/TableDirectoryEntry.php on line 17
+[20-Oct-2025 18:39:00 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Table\DirectoryEntry' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/TrueType/TableDirectoryEntry.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/TrueType/TableDirectoryEntry.php on line 17

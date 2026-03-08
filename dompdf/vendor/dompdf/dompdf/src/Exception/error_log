@@ -1,0 +1,12 @@
+[17-Oct-2025 21:00:16 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Exception' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Exception/ImageException.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Exception/ImageException.php on line 16
+[17-Oct-2025 21:00:19 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Exception' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Exception/ImageException.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Exception/ImageException.php on line 16
+[17-Oct-2025 21:06:57 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Exception' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Exception/ImageException.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Exception/ImageException.php on line 16

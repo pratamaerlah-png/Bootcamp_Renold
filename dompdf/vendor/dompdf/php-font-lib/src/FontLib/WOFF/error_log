@@ -1,0 +1,36 @@
+[20-Oct-2025 18:25:43 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\TrueType\File' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/WOFF/File.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/WOFF/File.php on line 19
+[20-Oct-2025 18:26:06 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\TrueType\Header' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/WOFF/Header.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/WOFF/Header.php on line 15
+[20-Oct-2025 18:27:55 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Table\DirectoryEntry' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/WOFF/TableDirectoryEntry.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/WOFF/TableDirectoryEntry.php on line 17
+[20-Oct-2025 18:33:13 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\TrueType\File' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/WOFF/File.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/WOFF/File.php on line 19
+[20-Oct-2025 18:33:17 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\TrueType\File' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/WOFF/File.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/WOFF/File.php on line 19
+[20-Oct-2025 18:33:57 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\TrueType\Header' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/WOFF/Header.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/WOFF/Header.php on line 15
+[20-Oct-2025 18:34:01 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\TrueType\Header' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/WOFF/Header.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/WOFF/Header.php on line 15
+[20-Oct-2025 18:38:41 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Table\DirectoryEntry' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/WOFF/TableDirectoryEntry.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/WOFF/TableDirectoryEntry.php on line 17
+[20-Oct-2025 18:38:45 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Table\DirectoryEntry' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/WOFF/TableDirectoryEntry.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/WOFF/TableDirectoryEntry.php on line 17

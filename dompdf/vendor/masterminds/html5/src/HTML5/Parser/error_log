@@ -1,0 +1,36 @@
+[20-Oct-2025 18:27:03 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'Masterminds\HTML5\Parser\EventHandler' not found in /home/berj5937/public_html/dompdf/vendor/masterminds/html5/src/HTML5/Parser/DOMTreeBuilder.php:26
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/masterminds/html5/src/HTML5/Parser/DOMTreeBuilder.php on line 26
+[20-Oct-2025 18:27:06 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Masterminds\HTML5\Parser\StringInputStream' not found in /home/berj5937/public_html/dompdf/vendor/masterminds/html5/src/HTML5/Parser/FileInputStream.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/masterminds/html5/src/HTML5/Parser/FileInputStream.php on line 17
+[20-Oct-2025 18:27:29 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'Masterminds\HTML5\Parser\InputStream' not found in /home/berj5937/public_html/dompdf/vendor/masterminds/html5/src/HTML5/Parser/StringInputStream.php:46
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/masterminds/html5/src/HTML5/Parser/StringInputStream.php on line 46
+[20-Oct-2025 18:36:26 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'Masterminds\HTML5\Parser\EventHandler' not found in /home/berj5937/public_html/dompdf/vendor/masterminds/html5/src/HTML5/Parser/DOMTreeBuilder.php:26
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/masterminds/html5/src/HTML5/Parser/DOMTreeBuilder.php on line 26
+[20-Oct-2025 18:36:30 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'Masterminds\HTML5\Parser\EventHandler' not found in /home/berj5937/public_html/dompdf/vendor/masterminds/html5/src/HTML5/Parser/DOMTreeBuilder.php:26
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/masterminds/html5/src/HTML5/Parser/DOMTreeBuilder.php on line 26
+[20-Oct-2025 18:36:34 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Masterminds\HTML5\Parser\StringInputStream' not found in /home/berj5937/public_html/dompdf/vendor/masterminds/html5/src/HTML5/Parser/FileInputStream.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/masterminds/html5/src/HTML5/Parser/FileInputStream.php on line 17
+[20-Oct-2025 18:36:37 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Masterminds\HTML5\Parser\StringInputStream' not found in /home/berj5937/public_html/dompdf/vendor/masterminds/html5/src/HTML5/Parser/FileInputStream.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/masterminds/html5/src/HTML5/Parser/FileInputStream.php on line 17
+[20-Oct-2025 18:37:19 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'Masterminds\HTML5\Parser\InputStream' not found in /home/berj5937/public_html/dompdf/vendor/masterminds/html5/src/HTML5/Parser/StringInputStream.php:46
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/masterminds/html5/src/HTML5/Parser/StringInputStream.php on line 46
+[20-Oct-2025 18:37:23 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'Masterminds\HTML5\Parser\InputStream' not found in /home/berj5937/public_html/dompdf/vendor/masterminds/html5/src/HTML5/Parser/StringInputStream.php:46
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/masterminds/html5/src/HTML5/Parser/StringInputStream.php on line 46

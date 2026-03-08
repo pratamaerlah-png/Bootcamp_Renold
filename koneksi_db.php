@@ -36,4 +36,3 @@ try {
     // Hentikan eksekusi skrip secara diam-diam untuk keamanan
     die("Koneksi Database Bermasalah. Silakan hubungi administrator.");
 }
-?>

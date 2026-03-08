@@ -1,0 +1,44 @@
+{
+    "oswald": {
+        "normal": "oswald_normal_b8f52930df56597d281bc4e0b2042194"
+    },
+    "roboto condensed": {
+        "normal": "roboto_condensed_normal_3af505982db99bcc4c6a08c99d1f880b"
+    },
+    "anton": {
+        "normal": "anton_normal_36c04721b495fb9eefbc2cc22a05040c"
+    },
+    "climatecrisis-variablefont_year": {
+        "normal": "climatecrisis_variablefont_year_normal_7ddccde617026de280d4d8eb3b56c694"
+    },
+    "engagement": {
+        "normal": "engagement_normal_e34cb83700a5c2a0b88f3fc5edbdcbff"
+    },
+    "michroma": {
+        "normal": "michroma_normal_8340e037283bc096ae007a6d5f941ce0"
+    },
+    "montserrat-variablefont_wght": {
+        "normal": "montserrat_variablefont_wght_normal_d31d311c960a53fb62ffd1eb9ba4e8e1"
+    },
+    "oswald-semibold": {
+        "normal": "oswald_semibold_normal_9a8b1111f47a2fdccb8318291b737e71"
+    },
+    "oswald-variablefont_wght": {
+        "normal": "oswald_variablefont_wght_normal_b295d5fb67fff41523b5f9362b4a2011"
+    },
+    "robotocondensed": {
+        "normal": "robotocondensed_normal_3af505982db99bcc4c6a08c99d1f880b"
+    },
+    "robotocondensed-extrabold": {
+        "normal": "robotocondensed_extrabold_normal_870282dd51bcc04bc333aef1193388b5"
+    },
+    "robotocondensed-variablefont_wght": {
+        "normal": "robotocondensed_variablefont_wght_normal_244b716a89355da8273ad518af3864f2"
+    },
+    "climatecrisis": {
+        "normal": "climatecrisis_normal_3e9e06765dd32037a02eda7e0b12941c"
+    },
+    "montserrat": {
+        "normal": "montserrat_normal_2ab1ca91925a0b61cd71d6eb0ff08a02"
+    }
+}

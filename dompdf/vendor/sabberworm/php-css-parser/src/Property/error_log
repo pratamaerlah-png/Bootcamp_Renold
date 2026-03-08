@@ -1,0 +1,60 @@
+[17-Oct-2025 21:01:52 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'Sabberworm\CSS\Renderable' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Property/AtRule.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Property/AtRule.php on line 8
+[17-Oct-2025 21:01:56 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'Sabberworm\CSS\Renderable' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Property/AtRule.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Property/AtRule.php on line 8
+[17-Oct-2025 21:01:59 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'Sabberworm\CSS\Property\AtRule' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Property/Import.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Property/Import.php on line 12
+[17-Oct-2025 21:02:03 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'Sabberworm\CSS\Property\AtRule' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Property/Import.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Property/Import.php on line 12
+[17-Oct-2025 21:02:48 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'Sabberworm\CSS\Property\AtRule' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Property/Charset.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Property/Charset.php on line 17
+[17-Oct-2025 21:02:53 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'Sabberworm\CSS\Property\AtRule' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Property/Charset.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Property/Charset.php on line 17
+[17-Oct-2025 21:04:44 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'Sabberworm\CSS\Property\AtRule' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Property/CSSNamespace.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Property/CSSNamespace.php on line 11
+[17-Oct-2025 21:04:48 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'Sabberworm\CSS\Property\AtRule' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Property/CSSNamespace.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Property/CSSNamespace.php on line 11
+[17-Oct-2025 21:05:40 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Sabberworm\CSS\Property\Selector' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Property/KeyframeSelector.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Property/KeyframeSelector.php on line 5
+[17-Oct-2025 21:05:43 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Sabberworm\CSS\Property\Selector' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Property/KeyframeSelector.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Property/KeyframeSelector.php on line 5
+[17-Oct-2025 21:08:10 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'Sabberworm\CSS\Renderable' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Property/AtRule.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Property/AtRule.php on line 8
+[17-Oct-2025 21:08:14 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'Sabberworm\CSS\Property\AtRule' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Property/Import.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Property/Import.php on line 12
+[17-Oct-2025 21:08:38 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'Sabberworm\CSS\Property\AtRule' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Property/Charset.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Property/Charset.php on line 17
+[17-Oct-2025 21:09:39 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'Sabberworm\CSS\Property\AtRule' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Property/CSSNamespace.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Property/CSSNamespace.php on line 11
+[17-Oct-2025 21:10:07 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Sabberworm\CSS\Property\Selector' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Property/KeyframeSelector.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Property/KeyframeSelector.php on line 5

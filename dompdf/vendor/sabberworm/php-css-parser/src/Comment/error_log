@@ -1,0 +1,12 @@
+[17-Oct-2025 21:01:43 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'Sabberworm\CSS\Renderable' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Comment/Comment.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Comment/Comment.php on line 8
+[17-Oct-2025 21:01:48 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'Sabberworm\CSS\Renderable' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Comment/Comment.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Comment/Comment.php on line 8
+[17-Oct-2025 21:08:07 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'Sabberworm\CSS\Renderable' not found in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Comment/Comment.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/sabberworm/php-css-parser/src/Comment/Comment.php on line 8

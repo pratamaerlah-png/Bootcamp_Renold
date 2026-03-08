@@ -1,0 +1,12 @@
+[11-Oct-2025 00:34:20 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Renderer\AbstractRenderer' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer.php:26
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer.php on line 26
+[11-Oct-2025 00:34:25 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Renderer\AbstractRenderer' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer.php:26
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer.php on line 26
+[11-Oct-2025 00:46:49 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Renderer\AbstractRenderer' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer.php:26
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Renderer.php on line 26

@@ -1,0 +1,12 @@
+[17-Oct-2025 20:57:52 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\BinaryStream' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Header.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Header.php on line 16
+[17-Oct-2025 20:58:18 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\BinaryStream' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Header.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Header.php on line 16
+[17-Oct-2025 20:58:22 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\BinaryStream' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Header.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Header.php on line 16

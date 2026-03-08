@@ -1,0 +1,36 @@
+[17-Oct-2025 20:36:08 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'Dompdf\Canvas' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Adapter/GD.php:22
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Adapter/GD.php on line 22
+[17-Oct-2025 20:36:12 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'Dompdf\Canvas' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Adapter/GD.php:22
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Adapter/GD.php on line 22
+[17-Oct-2025 20:36:45 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'Dompdf\Canvas' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Adapter/CPDF.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Adapter/CPDF.php on line 34
+[17-Oct-2025 20:36:49 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'Dompdf\Canvas' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Adapter/CPDF.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Adapter/CPDF.php on line 34
+[17-Oct-2025 20:38:23 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'Dompdf\Canvas' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Adapter/PDFLib.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Adapter/PDFLib.php on line 31
+[17-Oct-2025 20:38:26 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'Dompdf\Canvas' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Adapter/PDFLib.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Adapter/PDFLib.php on line 31
+[17-Oct-2025 20:52:46 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'Dompdf\Canvas' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Adapter/GD.php:22
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Adapter/GD.php on line 22
+[17-Oct-2025 20:53:02 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'Dompdf\Canvas' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Adapter/CPDF.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Adapter/CPDF.php on line 34
+[17-Oct-2025 20:53:54 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'Dompdf\Canvas' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Adapter/PDFLib.php:31
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/Adapter/PDFLib.php on line 31

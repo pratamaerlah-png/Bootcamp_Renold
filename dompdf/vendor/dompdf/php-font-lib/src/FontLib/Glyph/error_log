@@ -1,0 +1,36 @@
+[20-Oct-2025 18:26:16 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\BinaryStream' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Glyph/Outline.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Glyph/Outline.php on line 19
+[20-Oct-2025 18:27:14 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Glyph\Outline' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Glyph/OutlineSimple.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Glyph/OutlineSimple.php on line 16
+[20-Oct-2025 18:27:52 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Glyph\Outline' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Glyph/OutlineComposite.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Glyph/OutlineComposite.php on line 16
+[20-Oct-2025 18:34:50 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\BinaryStream' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Glyph/Outline.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Glyph/Outline.php on line 19
+[20-Oct-2025 18:34:54 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\BinaryStream' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Glyph/Outline.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Glyph/Outline.php on line 19
+[20-Oct-2025 18:36:49 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Glyph\Outline' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Glyph/OutlineSimple.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Glyph/OutlineSimple.php on line 16
+[20-Oct-2025 18:36:53 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Glyph\Outline' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Glyph/OutlineSimple.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Glyph/OutlineSimple.php on line 16
+[20-Oct-2025 18:38:34 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Glyph\Outline' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Glyph/OutlineComposite.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Glyph/OutlineComposite.php on line 16
+[20-Oct-2025 18:38:38 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\Glyph\Outline' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Glyph/OutlineComposite.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/Glyph/OutlineComposite.php on line 16

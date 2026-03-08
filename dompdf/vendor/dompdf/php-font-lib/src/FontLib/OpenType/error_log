@@ -1,0 +1,24 @@
+[20-Oct-2025 18:26:20 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\TrueType\File' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/OpenType/File.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/OpenType/File.php on line 15
+[20-Oct-2025 18:27:59 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\TrueType\TableDirectoryEntry' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/OpenType/TableDirectoryEntry.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/OpenType/TableDirectoryEntry.php on line 15
+[20-Oct-2025 18:34:58 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\TrueType\File' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/OpenType/File.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/OpenType/File.php on line 15
+[20-Oct-2025 18:35:01 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\TrueType\File' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/OpenType/File.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/OpenType/File.php on line 15
+[20-Oct-2025 18:38:49 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\TrueType\TableDirectoryEntry' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/OpenType/TableDirectoryEntry.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/OpenType/TableDirectoryEntry.php on line 15
+[20-Oct-2025 18:38:53 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'FontLib\TrueType\TableDirectoryEntry' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/OpenType/TableDirectoryEntry.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-font-lib/src/FontLib/OpenType/TableDirectoryEntry.php on line 15

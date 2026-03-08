@@ -1,0 +1,228 @@
+[20-Oct-2025 18:09:52 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\Shape' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Line.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Line.php on line 12
+[20-Oct-2025 18:09:55 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\Shape' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Line.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Line.php on line 12
+[20-Oct-2025 18:09:59 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\Shape' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Path.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Path.php on line 12
+[20-Oct-2025 18:10:03 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\Shape' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Path.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Path.php on line 12
+[20-Oct-2025 18:10:08 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\Shape' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Rect.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Rect.php on line 12
+[20-Oct-2025 18:10:12 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\Shape' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Rect.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Rect.php on line 12
+[20-Oct-2025 18:10:15 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\AbstractTag' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Stop.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Stop.php on line 10
+[20-Oct-2025 18:10:19 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\AbstractTag' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Stop.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Stop.php on line 10
+[20-Oct-2025 18:10:22 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\Shape' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Text.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Text.php on line 12
+[20-Oct-2025 18:10:26 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\Shape' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Text.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Text.php on line 12
+[20-Oct-2025 18:11:16 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\AbstractTag' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Group.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Group.php on line 12
+[20-Oct-2025 18:11:20 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\AbstractTag' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Group.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Group.php on line 12
+[20-Oct-2025 18:11:23 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\AbstractTag' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Image.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Image.php on line 12
+[20-Oct-2025 18:11:27 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\AbstractTag' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Image.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Image.php on line 12
+[20-Oct-2025 18:11:30 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\AbstractTag' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Shape.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Shape.php on line 12
+[20-Oct-2025 18:11:34 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\AbstractTag' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Shape.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Shape.php on line 12
+[20-Oct-2025 18:21:34 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\Shape' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Line.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Line.php on line 12
+[20-Oct-2025 18:21:38 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\Shape' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Path.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Path.php on line 12
+[20-Oct-2025 18:21:41 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\Shape' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Rect.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Rect.php on line 12
+[20-Oct-2025 18:21:45 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\AbstractTag' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Stop.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Stop.php on line 10
+[20-Oct-2025 18:21:49 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\Shape' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Text.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Text.php on line 12
+[20-Oct-2025 18:22:16 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\AbstractTag' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Group.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Group.php on line 12
+[20-Oct-2025 18:22:22 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\AbstractTag' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Image.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Image.php on line 12
+[20-Oct-2025 18:22:26 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\AbstractTag' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Shape.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Shape.php on line 12
+[20-Oct-2025 18:23:22 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\Group' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Anchor.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Anchor.php on line 10
+[20-Oct-2025 18:23:26 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\Shape' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Circle.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Circle.php on line 12
+[20-Oct-2025 18:23:30 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\AbstractTag' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Symbol.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Symbol.php on line 12
+[20-Oct-2025 18:23:33 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\AbstractTag' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/UseTag.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/UseTag.php on line 10
+[20-Oct-2025 18:24:06 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\Shape' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Ellipse.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Ellipse.php on line 12
+[20-Oct-2025 18:24:10 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\Shape' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Polygon.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Polygon.php on line 10
+[20-Oct-2025 18:24:49 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\AbstractTag' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/ClipPath.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/ClipPath.php on line 12
+[20-Oct-2025 18:24:52 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\Shape' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Polyline.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Polyline.php on line 10
+[20-Oct-2025 18:24:56 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\AbstractTag' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/StyleTag.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/StyleTag.php on line 12
+[20-Oct-2025 18:26:28 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\AbstractTag' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/LinearGradient.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/LinearGradient.php on line 14
+[20-Oct-2025 18:26:32 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\AbstractTag' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/RadialGradient.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/RadialGradient.php on line 10
+[20-Oct-2025 18:28:18 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\Group' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Anchor.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Anchor.php on line 10
+[20-Oct-2025 18:28:22 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\Group' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Anchor.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Anchor.php on line 10
+[20-Oct-2025 18:28:26 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\Shape' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Circle.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Circle.php on line 12
+[20-Oct-2025 18:28:30 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\Shape' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Circle.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Circle.php on line 12
+[20-Oct-2025 18:28:33 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\AbstractTag' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Symbol.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Symbol.php on line 12
+[20-Oct-2025 18:28:37 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\AbstractTag' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Symbol.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Symbol.php on line 12
+[20-Oct-2025 18:28:40 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\AbstractTag' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/UseTag.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/UseTag.php on line 10
+[20-Oct-2025 18:28:44 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\AbstractTag' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/UseTag.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/UseTag.php on line 10
+[20-Oct-2025 18:29:48 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\Shape' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Ellipse.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Ellipse.php on line 12
+[20-Oct-2025 18:29:52 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\Shape' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Ellipse.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Ellipse.php on line 12
+[20-Oct-2025 18:29:55 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\Shape' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Polygon.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Polygon.php on line 10
+[20-Oct-2025 18:29:59 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\Shape' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Polygon.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Polygon.php on line 10
+[20-Oct-2025 18:31:40 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\AbstractTag' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/ClipPath.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/ClipPath.php on line 12
+[20-Oct-2025 18:31:43 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\AbstractTag' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/ClipPath.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/ClipPath.php on line 12
+[20-Oct-2025 18:31:47 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\Shape' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Polyline.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Polyline.php on line 10
+[20-Oct-2025 18:31:51 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\Shape' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Polyline.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/Polyline.php on line 10
+[20-Oct-2025 18:31:55 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\AbstractTag' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/StyleTag.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/StyleTag.php on line 12
+[20-Oct-2025 18:31:59 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\AbstractTag' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/StyleTag.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/StyleTag.php on line 12
+[20-Oct-2025 18:35:15 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\AbstractTag' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/LinearGradient.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/LinearGradient.php on line 14
+[20-Oct-2025 18:35:19 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\AbstractTag' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/LinearGradient.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/LinearGradient.php on line 14
+[20-Oct-2025 18:35:22 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\AbstractTag' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/RadialGradient.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/RadialGradient.php on line 10
+[20-Oct-2025 18:35:26 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Svg\Tag\AbstractTag' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/RadialGradient.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Tag/RadialGradient.php on line 10

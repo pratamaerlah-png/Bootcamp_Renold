@@ -1,0 +1,156 @@
+[17-Oct-2025 20:43:43 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameDecorator\AbstractFrameDecorator' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/Page.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/Page.php on line 20
+[17-Oct-2025 20:43:47 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameDecorator\AbstractFrameDecorator' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/Page.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/Page.php on line 20
+[17-Oct-2025 20:43:51 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameDecorator\AbstractFrameDecorator' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/Text.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/Text.php on line 18
+[17-Oct-2025 20:43:54 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameDecorator\AbstractFrameDecorator' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/Text.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/Text.php on line 18
+[17-Oct-2025 20:45:51 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameDecorator\AbstractFrameDecorator' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/Block.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/Block.php on line 18
+[17-Oct-2025 20:45:56 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameDecorator\AbstractFrameDecorator' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/Block.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/Block.php on line 18
+[17-Oct-2025 20:45:59 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameDecorator\AbstractFrameDecorator' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/Image.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/Image.php on line 19
+[17-Oct-2025 20:46:03 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameDecorator\AbstractFrameDecorator' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/Image.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/Image.php on line 19
+[17-Oct-2025 20:46:06 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameDecorator\AbstractFrameDecorator' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/Table.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/Table.php on line 20
+[17-Oct-2025 20:46:10 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameDecorator\AbstractFrameDecorator' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/Table.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/Table.php on line 20
+[17-Oct-2025 20:56:39 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameDecorator\AbstractFrameDecorator' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/Page.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/Page.php on line 20
+[17-Oct-2025 20:56:42 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameDecorator\AbstractFrameDecorator' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/Text.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/Text.php on line 18
+[17-Oct-2025 20:57:30 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameDecorator\AbstractFrameDecorator' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/Block.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/Block.php on line 18
+[17-Oct-2025 20:57:34 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameDecorator\AbstractFrameDecorator' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/Image.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/Image.php on line 19
+[17-Oct-2025 20:57:37 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameDecorator\AbstractFrameDecorator' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/Table.php:20
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/Table.php on line 20
+[17-Oct-2025 20:58:25 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameDecorator\AbstractFrameDecorator' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/Inline.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/Inline.php on line 18
+[17-Oct-2025 20:58:29 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameDecorator\AbstractFrameDecorator' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/Inline.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/Inline.php on line 18
+[17-Oct-2025 20:59:45 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameDecorator\AbstractFrameDecorator' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/TableRow.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/TableRow.php on line 17
+[17-Oct-2025 20:59:50 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameDecorator\AbstractFrameDecorator' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/TableRow.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/TableRow.php on line 17
+[17-Oct-2025 21:00:23 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameDecorator\Block' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/TableCell.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/TableCell.php on line 18
+[17-Oct-2025 21:00:26 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameDecorator\Block' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/TableCell.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/TableCell.php on line 18
+[17-Oct-2025 21:00:36 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameDecorator\AbstractFrameDecorator' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/ListBullet.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/ListBullet.php on line 17
+[17-Oct-2025 21:00:40 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameDecorator\AbstractFrameDecorator' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/ListBullet.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/ListBullet.php on line 17
+[17-Oct-2025 21:02:27 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameDecorator\AbstractFrameDecorator' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/TableRowGroup.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/TableRowGroup.php on line 19
+[17-Oct-2025 21:02:30 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameDecorator\AbstractFrameDecorator' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/TableRowGroup.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/TableRowGroup.php on line 19
+[17-Oct-2025 21:03:26 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameDecorator\ListBullet' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/ListBulletImage.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/ListBulletImage.php on line 18
+[17-Oct-2025 21:03:30 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameDecorator\ListBullet' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/ListBulletImage.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/ListBulletImage.php on line 18
+[17-Oct-2025 21:04:38 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameDecorator\AbstractFrameDecorator' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/NullFrameDecorator.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/NullFrameDecorator.php on line 17
+[17-Oct-2025 21:04:41 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameDecorator\AbstractFrameDecorator' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/NullFrameDecorator.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/NullFrameDecorator.php on line 17
+[17-Oct-2025 21:05:33 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Frame' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/AbstractFrameDecorator.php:27
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/AbstractFrameDecorator.php on line 27
+[17-Oct-2025 21:05:36 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Frame' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/AbstractFrameDecorator.php:27
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/AbstractFrameDecorator.php on line 27
+[17-Oct-2025 21:06:02 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameDecorator\AbstractFrameDecorator' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/Inline.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/Inline.php on line 18
+[17-Oct-2025 21:06:42 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameDecorator\AbstractFrameDecorator' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/TableRow.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/TableRow.php on line 17
+[17-Oct-2025 21:07:00 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameDecorator\Block' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/TableCell.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/TableCell.php on line 18
+[17-Oct-2025 21:07:07 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameDecorator\AbstractFrameDecorator' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/ListBullet.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/ListBullet.php on line 17
+[17-Oct-2025 21:08:28 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameDecorator\AbstractFrameDecorator' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/TableRowGroup.php:19
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/TableRowGroup.php on line 19
+[17-Oct-2025 21:08:59 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameDecorator\ListBullet' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/ListBulletImage.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/ListBulletImage.php on line 18
+[17-Oct-2025 21:09:36 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\FrameDecorator\AbstractFrameDecorator' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/NullFrameDecorator.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/NullFrameDecorator.php on line 17
+[17-Oct-2025 21:10:03 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class 'Dompdf\Frame' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/AbstractFrameDecorator.php:27
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/dompdf/src/FrameDecorator/AbstractFrameDecorator.php on line 27

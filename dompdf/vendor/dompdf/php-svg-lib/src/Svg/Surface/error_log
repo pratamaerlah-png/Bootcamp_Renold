@@ -1,0 +1,24 @@
+[20-Oct-2025 18:26:39 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'Svg\Surface\SurfaceInterface' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Surface/SurfaceCpdf.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Surface/SurfaceCpdf.php on line 13
+[20-Oct-2025 18:26:55 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'Svg\Surface\SurfaceInterface' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Surface/SurfacePDFLib.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Surface/SurfacePDFLib.php on line 13
+[20-Oct-2025 18:35:37 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'Svg\Surface\SurfaceInterface' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Surface/SurfaceCpdf.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Surface/SurfaceCpdf.php on line 13
+[20-Oct-2025 18:35:41 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'Svg\Surface\SurfaceInterface' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Surface/SurfaceCpdf.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Surface/SurfaceCpdf.php on line 13
+[20-Oct-2025 18:36:06 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'Svg\Surface\SurfaceInterface' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Surface/SurfacePDFLib.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Surface/SurfacePDFLib.php on line 13
+[20-Oct-2025 18:36:10 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Interface 'Svg\Surface\SurfaceInterface' not found in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Surface/SurfacePDFLib.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/berj5937/public_html/dompdf/vendor/dompdf/php-svg-lib/src/Svg/Surface/SurfacePDFLib.php on line 13
