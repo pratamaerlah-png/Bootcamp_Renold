@@ -112,6 +112,17 @@ $sql = "CREATE TABLE IF NOT EXISTS invoices (
 )";
 exec_sql($conn, $sql, "Tabel 'invoices' (Tagihan)");
 
+// 9. Buat Tabel Log Aktivitas
+$sql = "CREATE TABLE IF NOT EXISTS activity_logs (
+    id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    user_id INT(11) UNSIGNED,
+    username VARCHAR(50),
+    action VARCHAR(255) NOT NULL,
+    ip_address VARCHAR(45),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+)";
+exec_sql($conn, $sql, "Tabel 'activity_logs' (Log Aktivitas)");
+
 echo "<hr>";
 echo "<h3>Mengisi Data Dummy (Sampel)...</h3>";
 

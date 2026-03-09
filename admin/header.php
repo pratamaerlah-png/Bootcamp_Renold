@@ -7,6 +7,7 @@ $conn->query("UPDATE events SET status = 'completed' WHERE event_date < NOW() AN
 
 // --- LOGIC: LOGOUT ---
 if (isset($_GET['action']) && $_GET['action'] == 'logout') {
+    log_activity($conn, "User logged out.");
     session_destroy();
     header("Location: index.php");
     exit;
@@ -27,6 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['do_login'])) {
         if (password_verify($password, $row['password'])) {
             $_SESSION['user_id'] = $row['id'];
             $_SESSION['role'] = $row['role'];
+            log_activity($conn, "User '" . $username . "' logged in.");
             header("Location: index.php");
             exit;
         }

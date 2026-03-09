@@ -10,6 +10,9 @@ $conn->query("CREATE TABLE IF NOT EXISTS invoices (id INT(11) UNSIGNED AUTO_INCR
 // Handle Delete Invoice
 if (isset($_GET['delete_inv'])) {
     $del_id = intval($_GET['delete_inv']);
+    $res = $conn->query("SELECT invoice_number FROM invoices WHERE id=$del_id");
+    $inv_num = $res->fetch_assoc()['invoice_number'] ?? 'N/A';
+    log_activity($conn, "Menghapus invoice: '" . $inv_num . "' (ID: " . $del_id . ")");
     $conn->query("DELETE FROM invoices WHERE id=$del_id");
     header("Location: invoices.php?msg=deleted");
     exit;
@@ -18,6 +21,9 @@ if (isset($_GET['delete_inv'])) {
 // Handle Mark as Paid
 if (isset($_GET['mark_paid'])) {
     $paid_id = intval($_GET['mark_paid']);
+    $res = $conn->query("SELECT invoice_number FROM invoices WHERE id=$paid_id");
+    $inv_num = $res->fetch_assoc()['invoice_number'] ?? 'N/A';
+    log_activity($conn, "Menandai lunas invoice: '" . $inv_num . "' (ID: " . $paid_id . ")");
     $conn->query("UPDATE invoices SET status='paid' WHERE id=$paid_id");
     header("Location: invoices.php?msg=saved");
     exit;
@@ -56,6 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['save_invoice'])) {
         $stmt->bind_param("ssssssds", $inv_number, $client_name, $client_email, $client_phone, $inv_date, $due_date, $total, $items_json);
     }
     $stmt->execute();
+    log_activity($conn, ($id > 0) ? "Mengedit invoice: '" . $inv_number . "'" : "Membuat invoice baru: '" . $inv_number . "'");
     header("Location: invoices.php?msg=saved");
     exit;
 }

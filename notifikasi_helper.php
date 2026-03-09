@@ -40,7 +40,7 @@ function kirimEmail($tujuan, $namaPenerima, $subjek, $isiPesan) {
         $mail->CharSet    = 'UTF-8';
 
         // Pengaturan Pengirim dan Penerima
-        $mail->setFrom($smtp_user, 'Panitia Gorontalo Half Marathon');
+        $mail->setFrom($smtp_user, 'Pratama Digitect');
         $mail->addAddress($tujuan, $namaPenerima);
         $mail->addReplyTo($smtp_user, 'Informasi');
 
@@ -89,8 +89,8 @@ function kirimWhatsApp($koneksi, $nomorTujuan, $pesan) {
     global $fonnte_tokens, $wa_gateway_url, $wa_gateway_key; 
 
     // 1. Ambil Token Device UTAMA dari Database
-    $stmt = $koneksi->prepare("SELECT setting_value FROM pengaturan WHERE setting_key = ?");
-    $setting_key = 'fonnte_token';
+    $stmt = $koneksi->prepare("SELECT setting_value FROM site_settings WHERE setting_key = ?");
+    $setting_key = 'wa_token';
     $stmt->bind_param("s", $setting_key);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -222,7 +222,7 @@ function kirimTyping($koneksi, $nomorTujuan) {
     if (empty($wa_gateway_url)) return false;
 
     // Ambil Token Utama
-    $stmt = $koneksi->prepare("SELECT setting_value FROM pengaturan WHERE setting_key = 'fonnte_token'");
+    $stmt = $koneksi->prepare("SELECT setting_value FROM site_settings WHERE setting_key = 'wa_token'");
     $stmt->execute();
     $token = $stmt->get_result()->fetch_assoc()['setting_value'] ?? null;
     $stmt->close();

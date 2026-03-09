@@ -20,16 +20,34 @@ if ($check_visit->num_rows == 0) {
 
 // --- CONTACT FORM HANDLER ---
 $contact_msg = '';
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['send_contact'])) {
-    $email_pengirim = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-    $tujuan = "pratamaerlah@gmail.com";
-    $subjek = "New Lead: Request Consultation from Website";
-    $pesan = "Ada permintaan konsultasi baru dari website.\n\nEmail Klien: " . $email_pengirim . "\n\nMohon segera di-follow up.";
-    $headers = "From: no-reply@pratamadigitect.com" . "\r\n" .
-               "Reply-To: " . $email_pengirim . "\r\n" .
-               "X-Mailer: PHP/" . phpversion();
+require_once 'notifikasi_helper.php'; // Panggil helper untuk fungsi kirimEmail
 
-    if (mail($tujuan, $subjek, $pesan, $headers)) {
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['send_contact'])) {
+    $nama_lengkap = htmlspecialchars($_POST['nama_lengkap']);
+    $email_pengirim = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+    $whatsapp = htmlspecialchars($_POST['whatsapp']);
+    $nama_event = htmlspecialchars($_POST['nama_event']);
+
+    $tujuan = "pratamaerlah@gmail.com";
+    $namaPenerima = "Admin Pratama Digitect";
+    $subjek = "Lead Baru dari Website: " . $nama_event;
+    
+    // Format nomor untuk link (hapus karakter non-angka)
+    $wa_link = "https://wa.me/" . preg_replace('/[^0-9]/', '', $whatsapp);
+    
+    $isiPesan = "
+        <h2>Permintaan Konsultasi Baru</h2>
+        <p>Ada calon klien baru yang tertarik dengan platform Anda.</p>
+        <hr>
+        <p><strong>Nama Lengkap:</strong> {$nama_lengkap}</p>
+        <p><strong>Email:</strong> <a href='mailto:{$email_pengirim}'>{$email_pengirim}</a></p>
+        <p><strong>No. WhatsApp:</strong> <a href='{$wa_link}'>{$whatsapp}</a> (Klik untuk Chat)</p>
+        <p><strong>Nama Event (Rencana):</strong> {$nama_event}</p>
+        <hr>
+        <p>Mohon untuk segera di-follow up.</p>
+    ";
+
+    if (kirimEmail($tujuan, $namaPenerima, $subjek, $isiPesan)) {
         $contact_msg = 'success';
     } else {
         $contact_msg = 'failed';
@@ -62,6 +80,14 @@ if ($check_table && $check_table->num_rows > 0) {
         $partners = array_filter(explode("\n", str_replace("\r", "", $partners_list)));
     }
 }
+
+// Ambil Data Social Media
+$social_links_raw = '';
+$res_social = $conn->query("SELECT setting_value FROM site_settings WHERE setting_key = 'social_links'");
+if ($res_social) {
+    $social_links_raw = $res_social->fetch_assoc()['setting_value'] ?? '';
+}
+$social_links = array_filter(explode("\n", str_replace("\r", "", $social_links_raw)));
 
 // Ambil Data Testimoni (Semua)
 $sql_testi = "SELECT * FROM testimonials ORDER BY sort_order ASC, id DESC LIMIT 5"; // Ambil 5 teratas sesuai urutan
@@ -744,11 +770,25 @@ if ($result_testi && $result_testi->num_rows > 0) {
                     <?php elseif ($contact_msg == 'failed'): ?>
                         <div class="bg-red-500/20 border border-red-500 text-red-400 p-4 rounded-lg mb-6">Gagal mengirim. Silakan coba lagi atau hubungi WhatsApp kami.</div>
                     <?php endif; ?>
-
+                    
                     <form class="space-y-4" method="POST" action="index.php#kontak">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-400 mb-1">Nama Lengkap</label>
+                                <input type="text" name="nama_lengkap" class="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-900 text-white focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Nama Anda" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-400 mb-1">Email</label>
+                                <input type="email" name="email" class="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-900 text-white focus:ring-2 focus:ring-blue-500 outline-none" placeholder="nama@email.com" required>
+                            </div>
+                        </div>
                         <div>
-                            <label class="block text-sm font-medium text-gray-400 mb-1">Email Bisnis</label>
-                            <input type="email" name="email" class="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-900 text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none" placeholder="nama@perusahaan.com" required>
+                            <label class="block text-sm font-medium text-gray-400 mb-1">No. WhatsApp</label>
+                            <input type="text" name="whatsapp" class="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-900 text-white focus:ring-2 focus:ring-blue-500 outline-none" placeholder="0812..." required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-400 mb-1">Nama Event (Rencana)</label>
+                            <input type="text" name="nama_event" class="w-full px-4 py-3 rounded-lg border border-gray-600 bg-gray-900 text-white focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Contoh: Gorontalo Marathon 2025" required>
                         </div>
                         <button type="submit" name="send_contact" class="w-full bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700 transition">
                             Request Consultation
@@ -823,9 +863,22 @@ if ($result_testi && $result_testi->num_rows > 0) {
                     <p class="mt-2 text-sm text-gray-500">Partner Event Lari & Konser.</p>
                 </div>
                 <div class="flex space-x-6">
-                    <a href="#" class="text-gray-500 hover:text-white transition"><i class="fa-brands fa-instagram text-xl"></i></a>
-                    <a href="#" class="text-gray-500 hover:text-white transition"><i class="fa-brands fa-linkedin text-xl"></i></a>
-                    <a href="#" class="text-gray-500 hover:text-white transition"><i class="fa-brands fa-twitter text-xl"></i></a>
+                    <?php
+                    foreach ($social_links as $link) {
+                        $link = trim($link);
+                        if (empty($link)) continue;
+
+                        $icon_class = 'fa-solid fa-link'; // Default icon
+                        if (strpos($link, 'instagram.com') !== false) $icon_class = 'fa-brands fa-instagram';
+                        if (strpos($link, 'linkedin.com') !== false) $icon_class = 'fa-brands fa-linkedin';
+                        if (strpos($link, 'twitter.com') !== false || strpos($link, 'x.com') !== false) $icon_class = 'fa-brands fa-twitter';
+                        if (strpos($link, 'facebook.com') !== false) $icon_class = 'fa-brands fa-facebook';
+                        if (strpos($link, 'youtube.com') !== false) $icon_class = 'fa-brands fa-youtube';
+                        if (strpos($link, 'tiktok.com') !== false) $icon_class = 'fa-brands fa-tiktok';
+                        
+                        echo '<a href="' . htmlspecialchars($link) . '" target="_blank" class="text-gray-500 hover:text-white transition"><i class="' . $icon_class . ' text-xl"></i></a>';
+                    }
+                    ?>
                 </div>
             </div>
             <div class="border-t border-white/10 mt-8 pt-8 text-center text-sm text-gray-500">

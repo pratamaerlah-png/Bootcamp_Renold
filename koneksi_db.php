@@ -36,3 +36,30 @@ try {
     // Hentikan eksekusi skrip secara diam-diam untuk keamanan
     die("Koneksi Database Bermasalah. Silakan hubungi administrator.");
 }
+
+/**
+ * Mencatat aktivitas user ke dalam database.
+ * @param mysqli $conn Objek koneksi database.
+ * @param string $action Deskripsi aktivitas yang dilakukan.
+ */
+function log_activity($conn, $action) {
+    // Pastikan session sudah dimulai
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
+
+    $user_id = $_SESSION['user_id'] ?? null;
+    $username = 'System/Guest';
+
+    if ($user_id) {
+        $stmt_user = $conn->prepare("SELECT username FROM users WHERE id = ?");
+        $stmt_user->bind_param("i", $user_id);
+        $stmt_user->execute();
+        $username = $stmt_user->get_result()->fetch_assoc()['username'] ?? 'User ID: ' . $user_id;
+    }
+    
+    $ip_address = $_SERVER['REMOTE_ADDR'];
+    $stmt = $conn->prepare("INSERT INTO activity_logs (user_id, username, action, ip_address) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("isss", $user_id, $username, $action, $ip_address);
+    $stmt->execute();
+}

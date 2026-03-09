@@ -32,6 +32,10 @@ $current_page = basename($_SERVER['PHP_SELF']);
             <i class="fa-solid fa-users-gear w-5"></i> 
             <span class="font-medium">Manajemen User</span>
         </a>
+        <a href="logs.php" class="flex items-center gap-3 py-3 px-4 rounded-lg transition duration-200 <?php echo ($current_page == 'logs.php') ? 'bg-blue-900/30 text-blue-400 border border-blue-500/30' : 'hover:bg-gray-800 text-gray-400'; ?>">
+            <i class="fa-solid fa-clipboard-list w-5"></i> 
+            <span class="font-medium">Log Aktivitas</span>
+        </a>
         <?php endif; ?>
     </nav>
     <div class="p-4 border-t border-gray-800">

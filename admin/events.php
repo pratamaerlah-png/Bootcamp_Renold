@@ -27,6 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['save_event'])) {
     }
     
     if ($stmt->execute()) {
+        log_activity($conn, ($id > 0) ? "Mengedit event: '" . $title . "'" : "Membuat event baru: '" . $title . "'");
         header("Location: events.php?msg=saved");
         exit;
     } else {
@@ -36,6 +37,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['save_event'])) {
 
 // 2. Handle Delete
 if ($action == 'delete' && $id > 0) {
+    $res = $conn->query("SELECT title FROM events WHERE id=$id");
+    $title = $res->fetch_assoc()['title'] ?? 'N/A';
+    log_activity($conn, "Menghapus event: '" . $title . "' (ID: " . $id . ")");
+
     $stmt = $conn->prepare("DELETE FROM events WHERE id=?");
     $stmt->bind_param("i", $id);
     $stmt->execute();

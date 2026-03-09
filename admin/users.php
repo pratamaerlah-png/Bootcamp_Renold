@@ -38,6 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['save_user'])) {
     }
     
     if ($stmt->execute()) {
+        log_activity($conn, ($id > 0) ? "Mengedit user: '" . $username . "'" : "Membuat user baru: '" . $username . "'");
         header("Location: users.php?msg=saved");
         exit;
     } else {
@@ -53,6 +54,10 @@ if ($action == 'delete' && $id > 0) {
         exit;
     }
     
+    $res = $conn->query("SELECT username FROM users WHERE id=$id");
+    $username_to_delete = $res->fetch_assoc()['username'] ?? 'N/A';
+    log_activity($conn, "Menghapus user: '" . $username_to_delete . "' (ID: " . $id . ")");
+
     $stmt = $conn->prepare("DELETE FROM users WHERE id=?");
     $stmt->bind_param("i", $id);
     $stmt->execute();

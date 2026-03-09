@@ -48,6 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['save_testi'])) {
         $stmt->bind_param("ssss", $name, $role, $content, $photo_url);
     }
     $stmt->execute();
+    log_activity($conn, ($id > 0) ? "Mengedit testimoni dari: '" . $name . "'" : "Membuat testimoni baru dari: '" . $name . "'");
     header("Location: testimonials.php?msg=saved");
     exit;
 }
@@ -55,6 +56,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['save_testi'])) {
 // Handle Delete
 if (isset($_GET['delete_id'])) {
     $del_id = intval($_GET['delete_id']);
+    $res = $conn->query("SELECT name FROM testimonials WHERE id=$del_id");
+    $name = $res->fetch_assoc()['name'] ?? 'N/A';
+    log_activity($conn, "Menghapus testimoni dari: '" . $name . "' (ID: " . $del_id . ")");
     $conn->query("DELETE FROM testimonials WHERE id=$del_id");
     header("Location: testimonials.php?msg=deleted");
     exit;
