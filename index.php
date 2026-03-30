@@ -8,14 +8,41 @@ error_reporting(E_ALL);
 require_once 'koneksi_db.php'; // Pastikan file ini ada. Jika nama file Anda 'db_connect.php', ganti nama filenya atau ubah baris ini.
 
 // --- VISITOR TRACKING ---
-$visitor_ip = $_SERVER['REMOTE_ADDR'];
+// --- Fungsi untuk mendapatkan IP Asli Pengunjung (lebih akurat) ---
+function get_real_ip() {
+    // Cek header dari Cloudflare (paling prioritas jika ada)
+    if (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) {
+      return $_SERVER["HTTP_CF_CONNECTING_IP"];
+    }
+    // Cek header dari proxy lain
+    if (isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+      $ip_array = explode(',', $_SERVER['HTTP_X_FORWARDED_FOR']);
+      return trim(reset($ip_array)); // Ambil IP pertama jika ada beberapa
+    }
+    // Fallback ke metode standar
+    return $_SERVER['REMOTE_ADDR'];
+}
+
+$visitor_ip = get_real_ip();
 $today_date = date('Y-m-d');
 
 // Cek apakah IP ini sudah berkunjung hari ini
 $check_visit = $conn->query("SELECT id FROM visitor_stats WHERE ip_address = '$visitor_ip' AND visit_date = '$today_date'");
 if ($check_visit->num_rows == 0) {
-    // Jika belum, catat kunjungan baru
-    $conn->query("INSERT INTO visitor_stats (visit_date, ip_address) VALUES ('$today_date', '$visitor_ip')");
+    // --- LAZY MIGRATION: Pastikan kolom city dan province ada ---
+    // Cek apakah kolom 'city' sudah ada di tabel visitor_stats
+    $check_col = $conn->query("SHOW COLUMNS FROM visitor_stats LIKE 'city'");
+    if ($check_col->num_rows == 0) {
+        // Jika belum ada, tambahkan kolom city dan province
+        $conn->query("ALTER TABLE visitor_stats ADD COLUMN city VARCHAR(100) AFTER ip_address");
+        $conn->query("ALTER TABLE visitor_stats ADD COLUMN province VARCHAR(100) AFTER city");
+    }
+    // -----------------------------------------------------------
+
+    // Catat kunjungan baru tanpa lokasi. Lokasi akan diupdate oleh JavaScript.
+    $stmt = $conn->prepare("INSERT INTO visitor_stats (visit_date, ip_address) VALUES (?, ?)");
+    $stmt->bind_param("ss", $today_date, $visitor_ip);
+    $stmt->execute();
 }
 
 // --- CONTACT FORM HANDLER ---
@@ -161,6 +188,7 @@ if ($result_testi && $result_testi->num_rows > 0) {
             
             <!-- Desktop Menu -->
             <div class="hidden md:flex space-x-8 items-center">
+                <a href="#events" class="text-gray-300 hover:text-blue-500 transition">Events</a>
                 <a href="#fitur" class="text-gray-300 hover:text-blue-500 transition">Fitur</a>
                 <a href="#harga" class="text-gray-300 hover:text-blue-500 transition">Harga</a>
                 <a href="#faq" class="text-gray-300 hover:text-blue-500 transition">FAQ</a>
@@ -175,6 +203,7 @@ if ($result_testi && $result_testi->num_rows > 0) {
 
         <!-- Mobile Menu Dropdown -->
         <div id="mobile-menu" class="hidden md:hidden bg-black border-t border-white/10 px-6 py-4">
+            <a href="#events" class="block py-2 text-gray-300 hover:text-blue-500">Events</a>
             <a href="#fitur" class="block py-2 text-gray-300 hover:text-blue-500">Fitur</a>
             <a href="#harga" class="block py-2 text-gray-300 hover:text-blue-500">Harga</a>
             <a href="#faq" class="block py-2 text-gray-300 hover:text-blue-500">FAQ</a>
@@ -230,8 +259,14 @@ if ($result_testi && $result_testi->num_rows > 0) {
                 <div class="marquee-content whitespace-nowrap">
                     <?php if (!empty($partners)): ?>
                         <?php for ($i = 0; $i < 2; $i++): // Duplicate loop for seamless marquee ?>
-                            <?php foreach ($partners as $url): ?>
-                                <img src="<?= htmlspecialchars(trim($url)) ?>" class="h-12 mx-8 inline-block grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition duration-300 object-contain">
+                            <?php foreach ($partners as $url): 
+                                $partner_url = trim($url);
+                                // Add protocol if missing to prevent loading issues
+                                if (!empty($partner_url) && !preg_match("~^(?:f|ht)tps?://~i", $partner_url)) {
+                                    $partner_url = "https://" . ltrim($partner_url, '/');
+                                }
+                            ?>
+                                <img src="<?= htmlspecialchars($partner_url) ?>" class="h-12 mx-8 inline-block grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition duration-300 object-contain" alt="Partner Logo">
                             <?php endforeach; ?>
                         <?php endfor; ?>
                     <?php else: ?>
@@ -276,7 +311,19 @@ if ($result_testi && $result_testi->num_rows > 0) {
                         $link_target = !empty($row['event_link']) ? "_blank" : "_self";
 
                         // Logika Gambar: Prioritas Banner Manual -> Screenshot Website -> Placeholder
-                        $display_image = !empty($row['banner_image']) ? $row['banner_image'] : '';
+                        $display_image = '';
+                        // Cek dulu apakah banner_image adalah URL gambar valid
+                        if (!empty($row['banner_image'])) {
+                            // Hanya gunakan jika URL berakhiran ekstensi gambar
+                            if (preg_match('/\.((jpg|jpeg|png|gif|webp|svg)(\?.*)?)$/i', $row['banner_image'])) {
+                                $banner_url = $row['banner_image'];
+                                if (!preg_match("~^(?:f|ht)tps?://~i", $banner_url)) {
+                                    $banner_url = "https://" . ltrim($banner_url, '/');
+                                }
+                                $display_image = $banner_url;
+                            }
+                        }
+                        // Jika banner_image tidak valid atau kosong, baru gunakan event_link untuk screenshot
                         if (empty($display_image) && !empty($row['event_link'])) {
                             // Pastikan URL memiliki protokol (http/https) agar mShots berhasil
                             $url_target = $row['event_link'];
@@ -286,6 +333,7 @@ if ($result_testi && $result_testi->num_rows > 0) {
                             // Menggunakan layanan mShots untuk generate screenshot otomatis
                             $display_image = "https://s0.wp.com/mshots/v1/" . urlencode($url_target) . "?w=800&h=600";
                         }
+                        // Final fallback jika semua gagal
                         if (empty($display_image)) {
                             $display_image = "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=60";
                         }
@@ -331,7 +379,19 @@ if ($result_testi && $result_testi->num_rows > 0) {
                         $link_target = !empty($row['event_link']) ? "_blank" : "_self";
 
                         // Logika Gambar (Sama untuk Konser)
-                        $display_image = !empty($row['banner_image']) ? $row['banner_image'] : '';
+                        $display_image = '';
+                        // Cek dulu apakah banner_image adalah URL gambar valid
+                        if (!empty($row['banner_image'])) {
+                            // Hanya gunakan jika URL berakhiran ekstensi gambar
+                            if (preg_match('/\.((jpg|jpeg|png|gif|webp|svg)(\?.*)?)$/i', $row['banner_image'])) {
+                                $banner_url = $row['banner_image'];
+                                if (!preg_match("~^(?:f|ht)tps?://~i", $banner_url)) {
+                                    $banner_url = "https://" . ltrim($banner_url, '/');
+                                }
+                                $display_image = $banner_url;
+                            }
+                        }
+                        // Jika banner_image tidak valid atau kosong, baru gunakan event_link untuk screenshot
                         if (empty($display_image) && !empty($row['event_link'])) {
                             $url_target = $row['event_link'];
                             if (!preg_match("~^(?:f|ht)tps?://~i", $url_target)) {
@@ -339,6 +399,7 @@ if ($result_testi && $result_testi->num_rows > 0) {
                             }
                             $display_image = "https://s0.wp.com/mshots/v1/" . urlencode($url_target) . "?w=800&h=600";
                         }
+                        // Final fallback jika semua gagal
                         if (empty($display_image)) {
                             $display_image = "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=60";
                         }
@@ -384,7 +445,19 @@ if ($result_testi && $result_testi->num_rows > 0) {
                         $link_target = !empty($row['event_link']) ? "_blank" : "_self";
 
                         // Logika Gambar
-                        $display_image = !empty($row['banner_image']) ? $row['banner_image'] : '';
+                        $display_image = '';
+                        // Cek dulu apakah banner_image adalah URL gambar valid
+                        if (!empty($row['banner_image'])) {
+                            // Hanya gunakan jika URL berakhiran ekstensi gambar
+                            if (preg_match('/\.((jpg|jpeg|png|gif|webp|svg)(\?.*)?)$/i', $row['banner_image'])) {
+                                $banner_url = $row['banner_image'];
+                                if (!preg_match("~^(?:f|ht)tps?://~i", $banner_url)) {
+                                    $banner_url = "https://" . ltrim($banner_url, '/');
+                                }
+                                $display_image = $banner_url;
+                            }
+                        }
+                        // Jika banner_image tidak valid atau kosong, baru gunakan event_link untuk screenshot
                         if (empty($display_image) && !empty($row['event_link'])) {
                             $url_target = $row['event_link'];
                             if (!preg_match("~^(?:f|ht)tps?://~i", $url_target)) {
@@ -392,6 +465,7 @@ if ($result_testi && $result_testi->num_rows > 0) {
                             }
                             $display_image = "https://s0.wp.com/mshots/v1/" . urlencode($url_target) . "?w=800&h=600";
                         }
+                        // Final fallback jika semua gagal
                         if (empty($display_image)) {
                             $display_image = "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=60";
                         }
@@ -807,17 +881,17 @@ if ($result_testi && $result_testi->num_rows > 0) {
                             <i class="fa-solid fa-chevron-right text-3xl"></i>
                         </button>
 
-                        <div id="testimonial-slider" class="relative overflow-hidden min-h-[200px]">
+                        <div id="testimonial-slider" class="grid grid-cols-1 relative overflow-hidden">
                             <?php if (!empty($testimonials)): ?>
                                 <?php foreach ($testimonials as $index => $testi): ?>
-                                <div class="testimonial-slide absolute inset-0 transition-opacity duration-500 flex flex-col items-center justify-center <?= $index === 0 ? 'opacity-100 z-10' : 'opacity-0 z-0' ?>" data-index="<?= $index ?>">
+                                <div class="testimonial-slide col-start-1 row-start-1 transition-opacity duration-500 flex flex-col items-center justify-center <?= $index === 0 ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none' ?>" data-index="<?= $index ?>">
                                     <p class="text-xl font-medium italic mb-6">"<?= htmlspecialchars($testi['content']) ?>"</p>
                                     
                                     <div class="flex items-center gap-4">
                                         <?php if (!empty($testi['photo_url'])): ?>
                                             <?php 
                                             // Cek apakah URL eksternal atau path lokal
-                                            $img_src = (strpos($testi['photo_url'], 'http') === 0) ? $testi['photo_url'] : $testi['photo_url'];
+                                            $img_src = (strpos($testi['photo_url'], 'http') === 0) ? $testi['photo_url'] : htmlspecialchars($testi['photo_url']);
                                             ?>
                                             <img src="<?= htmlspecialchars($img_src) ?>" alt="<?= htmlspecialchars($testi['name']) ?>" class="w-12 h-12 rounded-full object-cover border-2 border-white/30">
                                         <?php else: ?>

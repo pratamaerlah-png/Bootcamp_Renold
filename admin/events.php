@@ -1,5 +1,8 @@
 <?php
-require_once 'header.php';
+ob_start(); // Mulai output buffering
+require_once '../koneksi_db.php'; // Panggil koneksi dulu untuk logika
+
+// --- LOGIKA PEMROSESAN FORM DULU ---
 
 $action = $_GET['action'] ?? 'list';
 $id = $_GET['id'] ?? 0;
@@ -27,6 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['save_event'])) {
     }
     
     if ($stmt->execute()) {
+        // Panggil fungsi log setelah koneksi dan fungsi tersedia
         log_activity($conn, ($id > 0) ? "Mengedit event: '" . $title . "'" : "Membuat event baru: '" . $title . "'");
         header("Location: events.php?msg=saved");
         exit;
@@ -56,6 +60,9 @@ if (($action == 'edit') && $id > 0) {
     $stmt->execute();
     $event_data = $stmt->get_result()->fetch_assoc();
 }
+
+// --- BARU LOAD TAMPILAN SETELAH SEMUA LOGIKA SELESAI ---
+require_once 'header.php';
 ?>
 
 <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">

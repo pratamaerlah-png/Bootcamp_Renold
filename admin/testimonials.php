@@ -20,7 +20,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['save_testi'])) {
     $content = $_POST['content'];
     
     // Handle File Upload
-    $photo_url = $_POST['existing_photo'] ?? ''; // Default ke foto lama
+    $photo_url = $_POST['existing_photo'] ?? ''; // Default ke foto lama atau kosong
+    
     if (isset($_FILES['photo_file']) && $_FILES['photo_file']['error'] == 0) {
         $target_dir = "../uploads/testimonials/";
         if (!file_exists($target_dir)) {
@@ -38,6 +39,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['save_testi'])) {
                 $photo_url = "uploads/testimonials/" . $new_filename; // Simpan path relatif
             }
         }
+    } elseif (!empty($_POST['photo_link'])) {
+        // Jika tidak ada file yang diupload, cek apakah ada input link eksternal
+        // Dan pastikan user memang ingin mengganti/mengisi foto dengan link
+        $photo_url = $_POST['photo_link'];
     }
     
     if ($id > 0) {
@@ -110,15 +115,21 @@ if (isset($_POST['reorder_testimonials'])) {
                     <textarea name="content" rows="4" class="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-blue-500 outline-none" required><?= $edit_data['content'] ?? '' ?></textarea>
                 </div>
                 <div class="mb-6">
-                    <label class="block text-sm font-medium text-gray-400 mb-2">Foto Profil (Upload)</label>
+                    <label class="block text-sm font-medium text-gray-400 mb-2">Foto Profil</label>
                     <?php if (!empty($edit_data['photo_url'])): ?>
                         <div class="mb-2">
-                            <img src="../<?= htmlspecialchars($edit_data['photo_url']) ?>" class="w-12 h-12 rounded-full object-cover border border-gray-600">
+                            <?php 
+                                $img_src = (strpos($edit_data['photo_url'], 'http') === 0) ? $edit_data['photo_url'] : '../' . $edit_data['photo_url'];
+                            ?>
+                            <img src="<?= htmlspecialchars($img_src) ?>" class="w-12 h-12 rounded-full object-cover border border-gray-600">
+                            <p class="text-xs text-gray-500 mt-1">Foto saat ini</p>
                         </div>
                     <?php endif; ?>
-                    <input type="file" name="photo_file" class="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-2 text-white text-sm focus:ring-2 focus:ring-blue-500 outline-none file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-600 file:text-white hover:file:bg-blue-700">
+                    
+                    <input type="file" name="photo_file" class="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-2 text-white text-sm focus:ring-2 focus:ring-blue-500 outline-none file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-600 file:text-white hover:file:bg-blue-700 mb-2">
+                    <input type="text" name="photo_link" class="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-blue-500 outline-none text-sm" placeholder="Atau masukkan URL gambar (https://...)">
                     <input type="hidden" name="existing_photo" value="<?= $edit_data['photo_url'] ?? '' ?>">
-                    <p class="text-xs text-gray-500 mt-1">Format: JPG, PNG, WEBP. Max 2MB.</p>
+                    <p class="text-xs text-gray-500 mt-1">Prioritas: File Upload > URL Link > Foto Lama.</p>
                 </div>
                 <div class="flex gap-2">
                     <?php if($id > 0): ?>

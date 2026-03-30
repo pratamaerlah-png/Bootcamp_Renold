@@ -1,15 +1,31 @@
 <?php
-require_once 'header.php';
+ob_start(); // Mulai output buffering untuk menangani redirect
+session_start(); // PENTING: Mulai sesi agar $_SESSION bisa diakses
+require_once '../koneksi_db.php'; // Panggil koneksi DB langsung untuk logika
+
+// --- LOGIKA PEMROSESAN FORM DULU ---
+$action = $_GET['action'] ?? 'list';
+$id = $_GET['id'] ?? 0;
 
 // Cek apakah user yang login adalah admin (hanya admin yang boleh kelola user)
 if ($_SESSION['role'] !== 'admin') {
-    echo "<div class='p-8'><div class='bg-red-900/20 text-red-400 p-4 rounded-lg border border-red-500/30'>Akses Ditolak. Hanya Administrator yang dapat mengakses halaman ini.</div></div>";
-    require_once 'sidebar.php'; // Load sidebar agar layout tidak rusak total
+    // Load header dulu agar style tidak hancur
+    require_once 'header.php';
+    ?>
+    <div class="flex flex-col items-center justify-center h-[60vh] text-center">
+        <div class="bg-red-900/20 text-red-400 p-8 rounded-xl border border-red-500/30 max-w-lg">
+            <i class="fa-solid fa-triangle-exclamation text-5xl mb-4"></i>
+            <h2 class="text-2xl font-bold mb-2">Akses Ditolak</h2>
+            <p>Maaf, hanya Administrator yang memiliki izin untuk mengakses halaman Manajemen User.</p>
+            <p class="text-xs mt-4 text-gray-400 font-mono bg-gray-800 p-2 rounded">Current Role: <?= htmlspecialchars($_SESSION['role'] ?? 'None') ?></p>
+            <a href="index.php" class="inline-block mt-6 px-6 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg text-white font-bold transition">Kembali ke Dashboard</a>
+        </div>
+    </div>
+    <?php
+    // Tutup layout (jika ada footer di header.php atau struktur div yang perlu ditutup)
+    echo '</div></main></div></body></html>'; 
     exit;
 }
-
-$action = $_GET['action'] ?? 'list';
-$id = $_GET['id'] ?? 0;
 
 // 1. Handle Simpan Data (Add/Edit)
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['save_user'])) {
@@ -73,6 +89,9 @@ if (($action == 'edit') && $id > 0) {
     $stmt->execute();
     $user_data = $stmt->get_result()->fetch_assoc();
 }
+
+// --- BARU LOAD TAMPILAN SETELAH SEMUA LOGIKA SELESAI ---
+require_once 'header.php';
 ?>
 
 <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">

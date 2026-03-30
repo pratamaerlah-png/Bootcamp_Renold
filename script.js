@@ -104,7 +104,7 @@ if (navbar) {
 }
 
 // Loading Screen Logic
-window.addEventListener('load', () => {
+document.addEventListener('DOMContentLoaded', function() {
     const loader = document.getElementById('loading-screen');
     if (loader) {
         setTimeout(() => {
@@ -112,6 +112,42 @@ window.addEventListener('load', () => {
             setTimeout(() => { loader.style.display = 'none'; }, 500);
         }, 1500); // Tahan minimal 1.5 detik agar animasi terlihat
     }
+
+    // --- GPS Location Detection ---
+    function requestDeviceLocation() {
+        // Hanya minta lokasi sekali per sesi browser
+        if (sessionStorage.getItem('location_requested')) {
+            return;
+        }
+
+        if ('geolocation' in navigator) {
+            navigator.geolocation.getCurrentPosition(
+                // Success callback
+                (position) => {
+                    const { latitude, longitude } = position.coords;
+                    
+                    // Kirim koordinat ke server
+                    fetch('save_location.php', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ latitude, longitude })
+                    })
+                    .then(response => response.json())
+                    .then(data => console.log('Location saved:', data))
+                    .catch(error => console.error('Error saving location:', error));
+                    
+                    sessionStorage.setItem('location_requested', 'true');
+                },
+                // Error callback
+                (error) => {
+                    console.warn(`Geolocation error (${error.code}): ${error.message}`);
+                    sessionStorage.setItem('location_requested', 'true'); // Tandai sudah diminta walau gagal/ditolak
+                }
+            );
+        }
+    }
+
+    requestDeviceLocation();
 });
 
 // Revenue Calculator Logic

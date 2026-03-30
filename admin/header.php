@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 require_once '../koneksi_db.php'; 
 
 // --- AUTO UPDATE STATUS ---
@@ -76,6 +78,18 @@ if (!isset($_SESSION['user_id'])) {
     </html>
     <?php
     exit;
+}
+
+// --- FORCE REFRESH SESSION ROLE ---
+// Memastikan role di session selalu sinkron dengan database (Security Check)
+if (isset($_SESSION['user_id'])) {
+    $stmt_check = $conn->prepare("SELECT role FROM users WHERE id = ?");
+    $stmt_check->bind_param("i", $_SESSION['user_id']);
+    $stmt_check->execute();
+    $res_check = $stmt_check->get_result();
+    if ($u_data = $res_check->fetch_assoc()) {
+        $_SESSION['role'] = $u_data['role'];
+    }
 }
 ?>
 <!DOCTYPE html>

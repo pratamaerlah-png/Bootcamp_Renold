@@ -69,7 +69,7 @@ $result_selesai = $conn->query($sql_selesai);
             
             // Di halaman ini kita pakai ukuran standar grid
             ?>
-            <div class="group bg-gray-900 rounded-lg shadow-lg hover:shadow-blue-500/20 transition-shadow duration-300 border border-white/10 overflow-hidden w-[31%] md:w-[23%] lg:w-[18%]">
+            <div class="group bg-gray-900 rounded-lg shadow-lg hover:shadow-blue-500/20 transition-shadow duration-300 border border-white/10 overflow-hidden">
                 <div class="relative h-24 md:h-48 overflow-hidden">
                     <a href="<?= htmlspecialchars($link_href) ?>" target="<?= $link_target ?>" class="block w-full h-full">
                         <img src="<?= htmlspecialchars($display_image) ?>" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=60';">
@@ -92,29 +92,29 @@ $result_selesai = $conn->query($sql_selesai);
         ?>
 
         <!-- Tab Lari -->
-        <div id="content-lari" class="flex flex-wrap justify-center gap-4">
+        <div id="content-lari" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
             <?php if ($result_lari->num_rows > 0): ?>
                 <?php while($row = $result_lari->fetch_assoc()) renderEventCard($row, 'lari'); ?>
             <?php else: ?>
-                <p class="text-gray-500 py-12">Tidak ada event lari.</p>
+                <p class="col-span-full text-center text-gray-500 py-12">Tidak ada event lari.</p>
             <?php endif; ?>
         </div>
 
         <!-- Tab Konser -->
-        <div id="content-konser" class="hidden flex flex-wrap justify-center gap-4">
+        <div id="content-konser" class="hidden grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
             <?php if ($result_konser->num_rows > 0): ?>
                 <?php while($row = $result_konser->fetch_assoc()) renderEventCard($row, 'konser'); ?>
             <?php else: ?>
-                <p class="text-gray-500 py-12">Tidak ada event konser.</p>
+                <p class="col-span-full text-center text-gray-500 py-12">Tidak ada event konser.</p>
             <?php endif; ?>
         </div>
 
         <!-- Tab Selesai -->
-        <div id="content-selesai" class="hidden flex flex-wrap justify-center gap-4">
+        <div id="content-selesai" class="hidden grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
             <?php if ($result_selesai->num_rows > 0): ?>
                 <?php while($row = $result_selesai->fetch_assoc()) renderEventCard($row, 'selesai'); ?>
             <?php else: ?>
-                <p class="text-gray-500 py-12">Belum ada event selesai.</p>
+                <p class="col-span-full text-center text-gray-500 py-12">Belum ada event selesai.</p>
             <?php endif; ?>
         </div>
 

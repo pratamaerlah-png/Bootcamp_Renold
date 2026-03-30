@@ -11,6 +11,10 @@ $current_page = basename($_SERVER['PHP_SELF']);
             <i class="fa-solid fa-chart-line w-5"></i> 
             <span class="font-medium">Dashboard</span>
         </a>
+        <a href="visitors.php" class="flex items-center gap-3 py-3 px-4 rounded-lg transition duration-200 <?php echo ($current_page == 'visitors.php') ? 'bg-blue-900/30 text-blue-400 border border-blue-500/30' : 'hover:bg-gray-800 text-gray-400'; ?>">
+            <i class="fa-solid fa-map-location-dot w-5"></i> 
+            <span class="font-medium">Data Pengunjung</span>
+        </a>
         <a href="events.php" class="flex items-center gap-3 py-3 px-4 rounded-lg transition duration-200 <?php echo ($current_page == 'events.php') ? 'bg-blue-900/30 text-blue-400 border border-blue-500/30' : 'hover:bg-gray-800 text-gray-400'; ?>">
             <i class="fa-solid fa-calendar-days w-5"></i> 
             <span class="font-medium">Manajemen Event</span>

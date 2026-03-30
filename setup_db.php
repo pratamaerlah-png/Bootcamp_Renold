@@ -92,6 +92,8 @@ $sql = "CREATE TABLE IF NOT EXISTS visitor_stats (
     id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     visit_date DATE NOT NULL,
     ip_address VARCHAR(45) NOT NULL,
+    city VARCHAR(100),
+    province VARCHAR(100),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 )";
 exec_sql($conn, $sql, "Tabel 'visitor_stats' (Pengunjung)");
