@@ -55,8 +55,53 @@ $stmt->execute();
 $inv = $stmt->get_result()->fetch_assoc();
 
 if (!$inv) die("Invoice tidak ditemukan.");
+$discount_percentage = floatval($inv['discount_percentage'] ?? 0);
+$discount_type = $inv['discount_type'] ?? 'percentage';
+$discount_amount_db = floatval($inv['discount_amount'] ?? 0);
 
 $items = json_decode($inv['items_json'], true);
+
+// Proses item terlebih dahulu untuk mengetahui apakah ada DP
+$subtotal = 0;
+$adjustments = 0;
+$positive_items = [];
+$adjustment_items = [];
+$has_dp = false;
+
+foreach ($items as $item) {
+    $amount = floatval($item['amount']);
+    $desc = $item['desc'];
+
+    // Cek apakah item adalah DP berdasarkan deskripsi. Jika ya, paksa menjadi pengurang.
+    if (stripos($desc, 'Down Payment') !== false) {
+        $corrected_amount = -abs($amount);
+        $adjustments += $corrected_amount;
+        $item['amount'] = $corrected_amount;
+        $adjustment_items[] = $item;
+        $has_dp = true; // Tandai bahwa invoice ini mengandung DP
+    } else {
+        if ($amount >= 0) {
+            $subtotal += $amount;
+            $positive_items[] = $item;
+        } else {
+            $adjustments += $amount;
+            $adjustment_items[] = $item;
+        }
+    }
+}
+
+$discount_amount_calc = ($discount_type == 'nominal') ? $discount_amount_db : ($subtotal * $discount_percentage) / 100;
+$total_final = $subtotal - $discount_amount_calc + $adjustments;
+
+// Tentukan Teks dan Warna Status
+$status_text = 'BELUM BAYAR';
+$status_color = '#dc2626';
+if ($inv['status'] == 'paid') {
+    $status_text = 'LUNAS';
+    $status_color = '#059669';
+} elseif ($has_dp) {
+    $status_text = 'BELUM LUNAS';
+}
 
 // Load Logo (Base64 agar aman di dompdf)
 $logo_path = __DIR__ . '/../image/logoweb.png'; // Cek folder 'image'
@@ -157,6 +202,21 @@ $html = '
             opacity: 0.8;
             z-index: 100;
         }
+        .stamp-unpaid {
+            position: absolute;
+            top: 120px;
+            right: 40px;
+            border: 3px solid #dc2626;
+            color: #dc2626;
+            font-size: 30px;
+            font-weight: bold;
+            padding: 5px 15px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            transform: rotate(-15deg);
+            opacity: 0.8;
+            z-index: 100;
+        }
 
 
     </style>
@@ -165,6 +225,8 @@ $html = '
 // Logic for Paid Stamp (Diletakkan di luar string HTML)
 if (isset($inv['status']) && $inv['status'] == 'paid') {
     $html .= '<div class="stamp-paid">LUNAS</div>';
+} elseif ($has_dp) {
+    $html .= '<div class="stamp-unpaid">BELUM LUNAS</div>';
 }
 
 $html .= '
@@ -212,7 +274,7 @@ $html .= '
                     </div>
                     <div class="invoice-detail-row">
                         <span class="invoice-detail-label">Status:</span>
-                        <span class="invoice-detail-value" style="color: ' . ($inv['status'] == 'paid' ? '#059669' : '#dc2626') . ';">' . ($inv['status'] == 'paid' ? 'LUNAS' : 'BELUM BAYAR') . '</span>
+                        <span class="invoice-detail-value" style="color: ' . $status_color . ';">' . $status_text . '</span>
                     </div>
                 </td>
             </tr>
@@ -230,23 +292,18 @@ $html .= '
             </thead>
             <tbody>';
 
-$subtotal = 0;
-foreach ($items as $item) {
+foreach ($positive_items as $item) {
     $amount = floatval($item['amount']);
-    $subtotal += $amount;
     $html .= '
             <tr>
                 <td>
-                    <span class="item-name">' . $item['desc'] . '</span>
+                    <span class="item-name">' . htmlspecialchars($item['desc']) . '</span>
                 </td>
                 <td class="text-center">1</td>
                 <td class="text-right">Rp ' . number_format($amount, 0, ',', '.') . '</td>
                 <td class="text-right" style="font-weight:bold;">Rp ' . number_format($amount, 0, ',', '.') . '</td>
             </tr>';
 }
-
-$total_final = $subtotal;
-
 $html .= '
             </tbody>
         </table>
@@ -269,9 +326,28 @@ $html .= '
             <tr>
                                 <td>Subtotal</td>
                                 <td class="text-right">Rp ' . number_format($subtotal, 0, ',', '.') . '</td>
-            </tr>
-                            <tr class="final">
-                                <td>Total Akhir</td>
+            </tr>';
+if ($discount_amount_calc > 0) {
+    $discount_label = ($discount_type == 'percentage') ? 'Diskon (' . rtrim(rtrim(number_format($discount_percentage, 2, '.', ''), '0'), '.') . '%)' : 'Diskon';
+    $html .= '
+            <tr>
+                <td>' . $discount_label . '</td>
+                <td class="text-right" style="color: #dc2626;">- Rp ' . number_format($discount_amount_calc, 0, ',', '.') . '</td>
+            </tr>';
+}
+
+foreach ($adjustment_items as $item) {
+    $amount = floatval($item['amount']);
+    $html .= '
+            <tr>
+                <td>' . htmlspecialchars($item['desc']) . '</td>
+                <td class="text-right" style="color: #dc2626;">- Rp ' . number_format(abs($amount), 0, ',', '.') . '</td>
+            </tr>';
+}
+
+$html .= '
+            <tr class="final">
+                                <td>Sisa Bayar (Balance)</td>
                                 <td class="text-right">Rp ' . number_format($total_final, 0, ',', '.') . '</td>
                             </tr>
         </table>
@@ -283,7 +359,8 @@ $html .= '
     
     <!-- Footer (Dipindahkan keluar container agar full width) -->
     <div class="footer">
-        <a href="https://wa.me/6285298122890">Pratama Digitect</a> &bull; Dicetak pada: ' . date('d M Y H:i') . '
+        <a href="https://wa.me/6285298122890">Pratama Digitect</a> &bull; Dicetak pada: ' . date('d M Y H:i') . '<br>
+        <a href="https://' . $_SERVER['HTTP_HOST'] . '" target="_blank">' . ((strpos($_SERVER['HTTP_HOST'], 'www.') === 0) ? $_SERVER['HTTP_HOST'] : 'www.' . $_SERVER['HTTP_HOST']) . '</a>
     </div>
 </body>
 </html>';
@@ -357,8 +434,38 @@ if ($action == 'view') {
     $to = preg_replace('/[^0-9]/', '', $inv['client_phone']);
     if (substr($to, 0, 1) == '0') $to = '62' . substr($to, 1);
 
-    $link_invoice = "https://" . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . "/generate_invoice.php?id=" . $id . "&action=view";
-    $pesan = "Halo *" . $inv['client_name'] . "*,\n\nBerikut adalah link invoice Anda:\n" . $link_invoice . "\n\nTotal Tagihan: Rp " . number_format($inv['total_amount'], 0, ',', '.') . "\nJatuh Tempo: " . date('d/m/Y', strtotime($inv['due_date'])) . "\n\nMohon segera melakukan pembayaran. Terima kasih.";
+    $link_invoice = "https://" . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . "/view_invoice.php?id=" . $id;
+    
+    // --- Membangun pesan WhatsApp yang lebih detail ---
+    $pesan = "Halo *" . $inv['client_name'] . "*,\n\n";
+    $pesan .= "Berikut adalah rincian tagihan Anda untuk invoice *#" . $inv['invoice_number'] . "*:\n\n";
+    
+    $pesan .= "Subtotal: Rp " . number_format($subtotal, 0, ',', '.') . "\n";
+
+    if ($discount_amount_calc > 0) {
+        $discount_label = ($discount_type == 'percentage') ? 'Diskon (' . rtrim(rtrim(number_format($discount_percentage, 2, '.', ''), '0'), '.') . '%)' : 'Diskon';
+        $pesan .= $discount_label . ": - Rp " . number_format($discount_amount_calc, 0, ',', '.') . "\n";
+    }
+
+    foreach ($adjustment_items as $item) {
+        $amount = floatval($item['amount']);
+        $desc = htmlspecialchars($item['desc']);
+        // Tampilkan sebagai pengurang
+        $pesan .= $desc . ": - Rp " . number_format(abs($amount), 0, ',', '.') . "\n";
+    }
+    
+    $pesan .= "--------------------\n";
+    $pesan .= "*Sisa Bayar: Rp " . number_format($total_final, 0, ',', '.') . "*\n\n";
+    
+    $pesan .= "Metode Pembayaran:\n";
+    $pesan .= "Bank Central Asia (BCA)\n";
+    $pesan .= "No. Rekening: *7975591638*\n";
+    $pesan .= "A/N: Rizka Ruhayani Kistanto\n\n";
+    
+    $pesan .= "Jatuh Tempo: *" . date('d M Y', strtotime($inv['due_date'])) . "*\n\n";
+    
+    $pesan .= "Untuk detail lengkap dan pembayaran, silakan akses link berikut:\n" . $link_invoice . "\n\n";
+    $pesan .= "Terima kasih.";
 
     // Redirect langsung ke WhatsApp Web / App
     $wa_url = "https://wa.me/" . $to . "?text=" . urlencode($pesan);

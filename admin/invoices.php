@@ -7,6 +7,18 @@ $id = $_GET['id'] ?? 0;
 // Create Table (Lazy migration)
 $conn->query("CREATE TABLE IF NOT EXISTS invoices (id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY, invoice_number VARCHAR(50) NOT NULL UNIQUE, client_name VARCHAR(100) NOT NULL, client_email VARCHAR(100) NOT NULL, client_phone VARCHAR(20), invoice_date DATE NOT NULL, due_date DATE NOT NULL, total_amount DECIMAL(15, 2) NOT NULL, status ENUM('unpaid', 'paid', 'cancelled') DEFAULT 'unpaid', items_json TEXT, created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP)");
 
+// Lazy migration for discount column
+$check_col_discount = $conn->query("SHOW COLUMNS FROM invoices LIKE 'discount_percentage'");
+if ($check_col_discount->num_rows == 0) {
+    $conn->query("ALTER TABLE invoices ADD COLUMN discount_percentage DECIMAL(5, 2) DEFAULT 0.00");
+}
+
+// Lazy migration for discount nominal & type
+$check_col_discount_type = $conn->query("SHOW COLUMNS FROM invoices LIKE 'discount_type'");
+if ($check_col_discount_type->num_rows == 0) {
+    $conn->query("ALTER TABLE invoices ADD COLUMN discount_type ENUM('percentage', 'nominal') DEFAULT 'percentage', ADD COLUMN discount_amount DECIMAL(15, 2) DEFAULT 0.00");
+}
+
 // Handle Delete Invoice
 if (isset($_GET['delete_inv'])) {
     $del_id = intval($_GET['delete_inv']);
@@ -32,34 +44,71 @@ if (isset($_GET['mark_paid'])) {
 // Handle Save Invoice
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['save_invoice'])) {
     $inv_number = $_POST['invoice_number'];
+
+    // Blokir proses edit jika status sudah paid
+    if ($id > 0) {
+        $res_check = $conn->query("SELECT status FROM invoices WHERE id=$id");
+        if ($res_check && $res_check->fetch_assoc()['status'] == 'paid') {
+            die("Akses ditolak: Invoice yang sudah LUNAS tidak dapat diedit.");
+        }
+    }
+
     $client_name = $_POST['client_name'];
     $client_email = $_POST['client_email'];
     $client_phone = $_POST['client_phone'];
     $inv_date = $_POST['invoice_date'];
     $due_date = $_POST['due_date'];
     
+    $discount_type = $_POST['discount_type'] ?? 'percentage';
+    $discount_value = floatval($_POST['discount_value'] ?? 0);
+    $discount_percentage = 0;
+    $discount_amount = 0;
+    if ($discount_type == 'nominal') {
+        $discount_amount = $discount_value;
+    } else {
+        $discount_percentage = $discount_value;
+    }
+    
     // Process Items
     $items = [];
-    $total = 0;
+    $subtotal = 0;
+    $adjustments = 0;
     if (isset($_POST['item_desc'])) {
         for ($i = 0; $i < count($_POST['item_desc']); $i++) {
             if (!empty($_POST['item_desc'][$i])) {
                 $amount = floatval($_POST['item_amount'][$i]);
-                $items[] = ['desc' => $_POST['item_desc'][$i], 'amount' => $amount];
-                $total += $amount;
+                $desc = $_POST['item_desc'][$i];
+                $items[] = ['desc' => $desc, 'amount' => $amount];
+
+                // Cek apakah item adalah DP berdasarkan deskripsi.
+                if (stripos($desc, 'Down Payment') !== false) {
+                    // Selalu anggap sebagai pengurang, bahkan jika user input positif
+                    $adjustments += -abs($amount);
+                } else {
+                    if ($amount >= 0) {
+                        $subtotal += $amount;
+                    } else {
+                        // Untuk item pengurang lainnya (misal: diskon manual)
+                        $adjustments += $amount;
+                    }
+                }
             }
         }
     }
     $items_json = json_encode($items);
 
+    // Calculate final total with discount
+    $discount_amount_calc = ($discount_type == 'nominal') ? $discount_amount : ($subtotal * $discount_percentage) / 100;
+    $total = $subtotal - $discount_amount_calc + $adjustments;
+
     if ($id > 0) {
         // Update
-        $stmt = $conn->prepare("UPDATE invoices SET client_name=?, client_email=?, client_phone=?, invoice_date=?, due_date=?, total_amount=?, items_json=? WHERE id=?");
-        $stmt->bind_param("sssssdsi", $client_name, $client_email, $client_phone, $inv_date, $due_date, $total, $items_json, $id);
+        $stmt = $conn->prepare("UPDATE invoices SET client_name=?, client_email=?, client_phone=?, invoice_date=?, due_date=?, total_amount=?, items_json=?, discount_percentage=?, discount_type=?, discount_amount=? WHERE id=?");
+        $stmt->bind_param("sssssdsdsdi", $client_name, $client_email, $client_phone, $inv_date, $due_date, $total, $items_json, $discount_percentage, $discount_type, $discount_amount, $id);
     } else {
         // Insert
-        $stmt = $conn->prepare("INSERT INTO invoices (invoice_number, client_name, client_email, client_phone, invoice_date, due_date, total_amount, items_json) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("ssssssds", $inv_number, $client_name, $client_email, $client_phone, $inv_date, $due_date, $total, $items_json);
+        $stmt = $conn->prepare("INSERT INTO invoices (invoice_number, client_name, client_email, client_phone, invoice_date, due_date, total_amount, items_json, discount_percentage, discount_type, discount_amount) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("ssssssdsdsd", $inv_number, $client_name, $client_email, $client_phone, $inv_date, $due_date, $total, $items_json, $discount_percentage, $discount_type, $discount_amount);
     }
     $stmt->execute();
     log_activity($conn, ($id > 0) ? "Mengedit invoice: '" . $inv_number . "'" : "Membuat invoice baru: '" . $inv_number . "'");
@@ -84,18 +133,43 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['save_invoice'])) {
             <?php
             $edit_inv = [];
             $edit_items = [];
+            $invoice_number_default = '';
             if ($id > 0) {
                 $res = $conn->query("SELECT * FROM invoices WHERE id=$id");
                 if ($res) {
                     $edit_inv = $res->fetch_assoc();
+                    // Blokir render form edit jika status sudah paid
+                    if ($edit_inv['status'] == 'paid') {
+                        echo "<script>alert('Invoice yang sudah LUNAS tidak dapat diedit!'); window.location='invoices.php';</script>";
+                        exit;
+                    }
                     $edit_items = json_decode($edit_inv['items_json'], true);
                 }
+            } else {
+                // Generate new unique invoice number
+                $yearMonth = date('Y/m');
+                $prefix = "INV/" . $yearMonth . "/";
+                
+                $stmt_num = $conn->prepare("SELECT invoice_number FROM invoices WHERE invoice_number LIKE ? ORDER BY invoice_number DESC LIMIT 1");
+                $like_pattern = $prefix . '%';
+                $stmt_num->bind_param("s", $like_pattern);
+                $stmt_num->execute();
+                $res_num = $stmt_num->get_result();
+                
+                if ($res_num->num_rows > 0) {
+                    $last_inv = $res_num->fetch_assoc()['invoice_number'];
+                    $last_num = intval(substr($last_inv, strlen($prefix)));
+                    $next_num = $last_num + 1;
+                } else {
+                    $next_num = 1;
+                }
+                $invoice_number_default = $prefix . str_pad($next_num, 4, '0', STR_PAD_LEFT);
             }
             ?>
             <form method="POST" action="invoices.php<?= ($id > 0) ? '?id='.$id : '' ?>">
                 <div class="mb-4">
                     <label class="block text-sm font-medium text-gray-400 mb-2">No. Invoice</label>
-                    <input type="text" name="invoice_number" value="<?= $edit_inv['invoice_number'] ?? 'INV-'.date('Ymd').'-'.rand(100,999) ?>" class="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-blue-500 outline-none" readonly>
+                    <input type="text" name="invoice_number" value="<?= $edit_inv['invoice_number'] ?? $invoice_number_default ?>" class="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-blue-500 outline-none" readonly>
                 </div>
                 <div class="mb-4">
                     <label class="block text-sm font-medium text-gray-400 mb-2">Nama Klien</label>
@@ -136,19 +210,37 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['save_invoice'])) {
                     <div id="invoice-items" class="space-y-2">
                         <?php if (!empty($edit_items)): ?>
                             <?php foreach ($edit_items as $item): ?>
-                            <div class="flex gap-2">
+                            <div class="flex gap-2 items-center">
+                                <span class="drag-handle cursor-move text-gray-500 p-2" title="Geser untuk urutkan"><i class="fa-solid fa-grip-vertical"></i></span>
                                 <input type="text" name="item_desc[]" value="<?= htmlspecialchars($item['desc']) ?>" list="item-suggestions" class="flex-1 bg-gray-900 border border-gray-600 rounded px-3 py-2 text-sm text-white" placeholder="Deskripsi Item" required>
                                 <input type="number" name="item_amount[]" value="<?= $item['amount'] ?>" class="w-24 bg-gray-900 border border-gray-600 rounded px-3 py-2 text-sm text-white text-right" placeholder="Rp" required>
+                                <button type="button" onclick="this.parentElement.remove()" class="text-red-500 hover:text-red-400 px-2" title="Hapus Item"><i class="fa-solid fa-trash"></i></button>
                             </div>
                             <?php endforeach; ?>
                         <?php else: ?>
-                            <div class="flex gap-2">
+                            <div class="flex gap-2 items-center">
+                                <span class="drag-handle cursor-move text-gray-500 p-2" title="Geser untuk urutkan"><i class="fa-solid fa-grip-vertical"></i></span>
                                 <input type="text" name="item_desc[]" list="item-suggestions" class="flex-1 bg-gray-900 border border-gray-600 rounded px-3 py-2 text-sm text-white" placeholder="Deskripsi Item" required>
                                 <input type="number" name="item_amount[]" class="w-24 bg-gray-900 border border-gray-600 rounded px-3 py-2 text-sm text-white text-right" placeholder="Rp" required>
+                                <button type="button" onclick="this.parentElement.remove()" class="text-red-500 hover:text-red-400 px-2" title="Hapus Item"><i class="fa-solid fa-trash"></i></button>
                             </div>
                         <?php endif; ?>
                     </div>
-                    <button type="button" onclick="addItem()" class="mt-2 text-xs text-blue-400 hover:text-blue-300 flex items-center gap-1"><i class="fa-solid fa-plus"></i> Tambah Item</button>
+                    <div class="flex items-center gap-4">
+                        <button type="button" onclick="addItem()" class="mt-2 text-xs text-blue-400 hover:text-blue-300 flex items-center gap-1"><i class="fa-solid fa-plus"></i> Tambah Item</button>
+                        <button type="button" onclick="addDP()" class="mt-2 text-xs text-yellow-400 hover:text-yellow-300 flex items-center gap-1"><i class="fa-solid fa-money-bill-wave"></i> Tambah DP</button>
+                    </div>
+                </div>
+
+                <div class="mb-4 border-t border-gray-700 pt-4">
+                    <label class="block text-sm font-medium text-gray-400 mb-2">Diskon</label>
+                    <div class="flex gap-2">
+                        <select name="discount_type" class="w-1/3 bg-gray-900 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-blue-500 outline-none">
+                            <option value="percentage" <?= ($edit_inv['discount_type'] ?? 'percentage') == 'percentage' ? 'selected' : '' ?>>Persentase (%)</option>
+                            <option value="nominal" <?= ($edit_inv['discount_type'] ?? '') == 'nominal' ? 'selected' : '' ?>>Nominal (Rp)</option>
+                        </select>
+                        <input type="number" name="discount_value" value="<?= ($edit_inv['discount_type'] ?? 'percentage') == 'nominal' ? ($edit_inv['discount_amount'] ?? 0) : ($edit_inv['discount_percentage'] ?? 0) ?>" class="flex-1 bg-gray-900 border border-gray-600 rounded-lg px-4 py-2 text-white" placeholder="Contoh: 10 atau 50000" step="any" min="0">
+                    </div>
                 </div>
 
                 <div class="flex gap-2">
@@ -161,10 +253,29 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['save_invoice'])) {
             <script>
                 function addItem() {
                     const div = document.createElement('div');
-                    div.className = 'flex gap-2';
-                    div.innerHTML = '<input type="text" name="item_desc[]" list="item-suggestions" class="flex-1 bg-gray-900 border border-gray-600 rounded px-3 py-2 text-sm text-white" placeholder="Deskripsi Item"><input type="number" name="item_amount[]" class="w-24 bg-gray-900 border border-gray-600 rounded px-3 py-2 text-sm text-white text-right" placeholder="Rp">';
+                    div.className = 'flex gap-2 items-center';
+                    div.innerHTML = `<span class="drag-handle cursor-move text-gray-500 p-2" title="Geser untuk urutkan"><i class="fa-solid fa-grip-vertical"></i></span>
+                                   <input type="text" name="item_desc[]" list="item-suggestions" class="flex-1 bg-gray-900 border border-gray-600 rounded px-3 py-2 text-sm text-white" placeholder="Deskripsi Item" required>
+                                   <input type="number" name="item_amount[]" class="w-24 bg-gray-900 border border-gray-600 rounded px-3 py-2 text-sm text-white text-right" placeholder="Rp" required>
+                                   <button type="button" onclick="this.parentElement.remove()" class="text-red-500 hover:text-red-400 px-2" title="Hapus Item"><i class="fa-solid fa-trash"></i></button>`;
                     document.getElementById('invoice-items').appendChild(div);
                 }
+                function addDP() {
+                    const div = document.createElement('div');
+                    div.className = 'flex gap-2 items-center';
+                    div.innerHTML = `<span class="drag-handle cursor-move text-gray-500 p-2" title="Geser untuk urutkan"><i class="fa-solid fa-grip-vertical"></i></span>
+                                   <input type="text" name="item_desc[]" value="Down Payment (DP)" class="flex-1 bg-gray-900 border border-gray-600 rounded px-3 py-2 text-sm text-white" placeholder="Deskripsi Item" required>
+                                   <input type="number" name="item_amount[]" class="w-24 bg-gray-900 border border-gray-600 rounded px-3 py-2 text-sm text-white text-right" placeholder="Contoh: -500000" required>
+                                   <button type="button" onclick="this.parentElement.remove()" class="text-red-500 hover:text-red-400 px-2" title="Hapus Item"><i class="fa-solid fa-trash"></i></button>`;
+                    document.getElementById('invoice-items').appendChild(div);
+                }
+
+                // Inisialisasi SortableJS
+                new Sortable(document.getElementById('invoice-items'), {
+                    animation: 150,
+                    handle: '.drag-handle', // Tentukan elemen handle untuk drag
+                    ghostClass: 'bg-blue-900/30' // Kelas untuk item bayangan saat digeser
+                });
             </script>
         </div>
     </div>
@@ -185,6 +296,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['save_invoice'])) {
                     <?php
                     $res = $conn->query("SELECT * FROM invoices ORDER BY id DESC");
                     while($row = $res->fetch_assoc()):
+                        // Hitung subtotal khusus untuk ditampilkan (Total layanan, abaikan DP dan Diskon)
+                        $items_list = json_decode($row['items_json'], true);
+                        $display_subtotal = 0;
+                        $has_dp = false;
+                        if (is_array($items_list)) {
+                            foreach ($items_list as $itm) {
+                                $amt = floatval($itm['amount']);
+                                if (stripos($itm['desc'], 'Down Payment') !== false) {
+                                    $has_dp = true;
+                                } elseif ($amt >= 0) {
+                                    $display_subtotal += $amt;
+                                }
+                            }
+                        }
                     ?>
                     <tr class="hover:bg-gray-700/30">
                         <td class="p-4">
@@ -193,9 +318,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['save_invoice'])) {
                         </td>
                         <td class="p-4 text-white"><?= htmlspecialchars($row['client_name']) ?></td>
                         <td class="p-4">
-                            <div class="font-bold text-green-400">Rp <?= number_format($row['total_amount'], 0, ',', '.') ?></div>
+                            <div class="font-bold text-green-400">Rp <?= number_format($display_subtotal, 0, ',', '.') ?></div>
                             <?php if($row['status'] == 'paid'): ?>
                                 <span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-green-900 text-green-300 border border-green-700 mt-1">LUNAS</span>
+                            <?php elseif($has_dp): ?>
+                                <span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-yellow-900 text-yellow-300 border border-yellow-700 mt-1">BELUM LUNAS</span>
                             <?php else: ?>
                                 <span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-red-900 text-red-300 border border-red-700 mt-1">BELUM BAYAR</span>
                             <?php endif; ?>
