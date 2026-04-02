@@ -11,30 +11,44 @@ $social_links_raw = '';
 $conn->query("CREATE TABLE IF NOT EXISTS site_settings (id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY, setting_key VARCHAR(50) UNIQUE NOT NULL, setting_value TEXT, created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP)");
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $partners_data = $conn->real_escape_string($_POST['partners_data']);
-    $wa_token = $conn->real_escape_string($_POST['wa_token']);
-    $social_links_raw = $conn->real_escape_string($_POST['social_links']);
+    $settings_to_save = [
+        'partners_data' => $_POST['partners_data'] ?? '',
+        'wa_token' => $_POST['wa_token'] ?? '',
+        'social_links' => $_POST['social_links'] ?? '',
+        'bank_name' => $_POST['bank_name'] ?? '',
+        'bank_account' => $_POST['bank_account'] ?? '',
+        'bank_owner' => $_POST['bank_owner'] ?? '',
+        'wa_template' => $_POST['wa_template'] ?? ''
+    ];
 
-    $sql = "INSERT INTO site_settings (setting_key, setting_value) VALUES ('partners_data', '$partners_data') ON DUPLICATE KEY UPDATE setting_value='$partners_data'";
-    $conn->query($sql);
+    foreach ($settings_to_save as $key => $val) {
+        $val = $conn->real_escape_string($val);
+        $conn->query("INSERT INTO site_settings (setting_key, setting_value) VALUES ('$key', '$val') ON DUPLICATE KEY UPDATE setting_value='$val'");
+    }
+    
+    log_activity($conn, "Memperbarui Pengaturan Website.");
+    header("Location: settings.php?msg=saved");
+    exit;
+}
 
-    $sql_wa = "INSERT INTO site_settings (setting_key, setting_value) VALUES ('wa_token', '$wa_token') ON DUPLICATE KEY UPDATE setting_value='$wa_token'";
-    $conn->query($sql_wa);
-
-    $sql_social = "INSERT INTO site_settings (setting_key, setting_value) VALUES ('social_links', '$social_links_raw') ON DUPLICATE KEY UPDATE setting_value='$social_links_raw'";
-    if ($conn->query($sql_social)) {
-            log_activity($conn, "Memperbarui Pengaturan Website.");
-            header("Location: settings.php?msg=saved");
-            exit;
+$settings = [];
+$res = $conn->query("SELECT * FROM site_settings");
+if ($res) {
+    while($row = $res->fetch_assoc()) {
+        $settings[$row['setting_key']] = $row['setting_value'];
     }
 }
-$res = $conn->query("SELECT setting_value FROM site_settings WHERE setting_key='partners_data'");
-$partners_data = ($res && $res->num_rows > 0) ? $res->fetch_assoc()['setting_value'] : '';
 
-$res_wa = $conn->query("SELECT setting_value FROM site_settings WHERE setting_key='wa_token'");
-$wa_token = ($res_wa && $res_wa->num_rows > 0) ? $res_wa->fetch_assoc()['setting_value'] : '';
-$res_social = $conn->query("SELECT setting_value FROM site_settings WHERE setting_key='social_links'");
-$social_links_raw = ($res_social && $res_social->num_rows > 0) ? $res_social->fetch_assoc()['setting_value'] : '';
+$partners_data = $settings['partners_data'] ?? '';
+$wa_token = $settings['wa_token'] ?? '';
+$social_links_raw = $settings['social_links'] ?? '';
+
+$bank_name = $settings['bank_name'] ?? 'Bank Central Asia (BCA)';
+$bank_account = $settings['bank_account'] ?? '7975591638';
+$bank_owner = $settings['bank_owner'] ?? 'Rizka Ruhayani Kistanto';
+
+$default_wa = "Halo *[CLIENT_NAME]*,\n\nBerikut adalah rincian tagihan Anda untuk invoice *#[INVOICE_NUMBER]*:\n\n[DETAILS]\n--------------------\n*Sisa Bayar: Rp [TOTAL_SISA]*\n\nMetode Pembayaran:\n[BANK_INFO]\n\nJatuh Tempo: *[DUE_DATE]*\n\nUntuk detail lengkap dan pembayaran, silakan akses link berikut:\n[LINK_INVOICE]\n\nTerima kasih.";
+$wa_template = $settings['wa_template'] ?? $default_wa;
 ?>
 
 <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
@@ -64,6 +78,31 @@ $social_links_raw = ($res_social && $res_social->num_rows > 0) ? $res_social->fe
         <div class="mb-6">
             <label class="block text-sm font-medium text-gray-400 mb-2">Token WhatsApp (Fonnte)</label>
             <input type="text" name="wa_token" value="<?= htmlspecialchars($wa_token) ?>" class="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-blue-500 outline-none transition" placeholder="Masukkan Token Fonnte Anda">
+        </div>
+        
+        <div class="mb-6">
+            <h3 class="text-lg font-bold text-white mb-4 border-b border-gray-700 pb-2">Informasi Rekening Bank (Invoice)</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-2">
+                <div>
+                    <label class="block text-sm font-medium text-gray-400 mb-2">Nama Bank</label>
+                    <input type="text" name="bank_name" value="<?= htmlspecialchars($bank_name) ?>" class="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-blue-500 outline-none transition" placeholder="Contoh: Bank Central Asia (BCA)">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-400 mb-2">Nomor Rekening</label>
+                    <input type="text" name="bank_account" value="<?= htmlspecialchars($bank_account) ?>" class="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-blue-500 outline-none transition" placeholder="Contoh: 1234567890">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-400 mb-2">Atas Nama (A/N)</label>
+                    <input type="text" name="bank_owner" value="<?= htmlspecialchars($bank_owner) ?>" class="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-blue-500 outline-none transition" placeholder="Contoh: John Doe">
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-6">
+            <h3 class="text-lg font-bold text-white mb-4 border-b border-gray-700 pb-2">Template Pesan WhatsApp (Invoice)</h3>
+            <label class="block text-sm font-medium text-gray-400 mb-2">Format pesan untuk notifikasi tagihan ke klien</label>
+            <textarea name="wa_template" rows="12" class="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-blue-500 outline-none transition font-mono text-sm"><?= htmlspecialchars($wa_template) ?></textarea>
+            <p class="text-xs text-gray-500 mt-2">Variabel yang tersedia: <code class="text-blue-400">[CLIENT_NAME]</code>, <code class="text-blue-400">[INVOICE_NUMBER]</code>, <code class="text-blue-400">[DETAILS]</code>, <code class="text-blue-400">[TOTAL_SISA]</code>, <code class="text-blue-400">[BANK_INFO]</code>, <code class="text-blue-400">[DUE_DATE]</code>, <code class="text-blue-400">[LINK_INVOICE]</code></p>
         </div>
         
         <div class="mb-6">

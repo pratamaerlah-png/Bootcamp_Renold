@@ -93,6 +93,18 @@ foreach ($items as $item) {
 $discount_amount_calc = ($discount_type == 'nominal') ? $discount_amount_db : ($subtotal * $discount_percentage) / 100;
 $total_final = $subtotal - $discount_amount_calc + $adjustments;
 
+// Load Settings for Bank & WA
+$settings = [];
+$res_settings = $conn->query("SELECT * FROM site_settings");
+if ($res_settings) {
+    while($row = $res_settings->fetch_assoc()) {
+        $settings[$row['setting_key']] = $row['setting_value'];
+    }
+}
+$bank_name = $settings['bank_name'] ?? 'Bank Central Asia (BCA)';
+$bank_account = $settings['bank_account'] ?? '7975591638';
+$bank_owner = $settings['bank_owner'] ?? 'Rizka Ruhayani Kistanto';
+
 // Tentukan Teks dan Warna Status
 $status_text = 'BELUM BAYAR';
 $status_color = '#dc2626';
@@ -315,9 +327,9 @@ $html .= '
                     <td width="55%">
                         <div class="payment-info">
                             <h4>Metode Pembayaran</h4>
-                            <p>Bank Central Asia (BCA)</p>
-                            <p class="bank-account">7975591638</p>
-                            <p style="font-size:11px; font-style:italic;">A/N Rizka Ruhayani Kistanto</p>
+                            <p>' . htmlspecialchars($bank_name) . '</p>
+                            <p class="bank-account">' . htmlspecialchars($bank_account) . '</p>
+                            <p style="font-size:11px; font-style:italic;">A/N ' . htmlspecialchars($bank_owner) . '</p>
                         </div>
                     </td>
                     <td width="5%"></td>
@@ -347,7 +359,7 @@ foreach ($adjustment_items as $item) {
 
 $html .= '
             <tr class="final">
-                                <td>Sisa Bayar (Balance)</td>
+                                <td>Total/Sisa Bayar </td>
                                 <td class="text-right">Rp ' . number_format($total_final, 0, ',', '.') . '</td>
                             </tr>
         </table>
@@ -437,35 +449,39 @@ if ($action == 'view') {
     $link_invoice = "https://" . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . "/view_invoice.php?id=" . $id;
     
     // --- Membangun pesan WhatsApp yang lebih detail ---
-    $pesan = "Halo *" . $inv['client_name'] . "*,\n\n";
-    $pesan .= "Berikut adalah rincian tagihan Anda untuk invoice *#" . $inv['invoice_number'] . "*:\n\n";
-    
-    $pesan .= "Subtotal: Rp " . number_format($subtotal, 0, ',', '.') . "\n";
+    $details_text = "Subtotal: Rp " . number_format($subtotal, 0, ',', '.') . "\n";
 
     if ($discount_amount_calc > 0) {
         $discount_label = ($discount_type == 'percentage') ? 'Diskon (' . rtrim(rtrim(number_format($discount_percentage, 2, '.', ''), '0'), '.') . '%)' : 'Diskon';
-        $pesan .= $discount_label . ": - Rp " . number_format($discount_amount_calc, 0, ',', '.') . "\n";
+        $details_text .= $discount_label . ": - Rp " . number_format($discount_amount_calc, 0, ',', '.') . "\n";
     }
 
     foreach ($adjustment_items as $item) {
         $amount = floatval($item['amount']);
         $desc = htmlspecialchars($item['desc']);
         // Tampilkan sebagai pengurang
-        $pesan .= $desc . ": - Rp " . number_format(abs($amount), 0, ',', '.') . "\n";
+        $details_text .= $desc . ": - Rp " . number_format(abs($amount), 0, ',', '.') . "\n";
     }
-    
-    $pesan .= "--------------------\n";
-    $pesan .= "*Sisa Bayar: Rp " . number_format($total_final, 0, ',', '.') . "*\n\n";
-    
-    $pesan .= "Metode Pembayaran:\n";
-    $pesan .= "Bank Central Asia (BCA)\n";
-    $pesan .= "No. Rekening: *7975591638*\n";
-    $pesan .= "A/N: Rizka Ruhayani Kistanto\n\n";
-    
-    $pesan .= "Jatuh Tempo: *" . date('d M Y', strtotime($inv['due_date'])) . "*\n\n";
-    
-    $pesan .= "Untuk detail lengkap dan pembayaran, silakan akses link berikut:\n" . $link_invoice . "\n\n";
-    $pesan .= "Terima kasih.";
+    $details_text = rtrim($details_text);
+
+    $bank_info_text = $bank_name . "\nNo. Rekening: *" . $bank_account . "*\nA/N: " . $bank_owner;
+
+    $default_wa = "Halo *[CLIENT_NAME]*,\n\nBerikut adalah rincian tagihan Anda untuk invoice *#[INVOICE_NUMBER]*:\n\n[DETAILS]\n--------------------\n*Sisa Bayar: Rp [TOTAL_SISA]*\n\nMetode Pembayaran:\n[BANK_INFO]\n\nJatuh Tempo: *[DUE_DATE]*\n\nUntuk detail lengkap dan pembayaran, silakan akses link berikut:\n[LINK_INVOICE]\n\nTerima kasih.";
+    $wa_template = $settings['wa_template'] ?? $default_wa;
+
+    $pesan = str_replace(
+        ['[CLIENT_NAME]', '[INVOICE_NUMBER]', '[DETAILS]', '[TOTAL_SISA]', '[BANK_INFO]', '[DUE_DATE]', '[LINK_INVOICE]'],
+        [
+            $inv['client_name'], 
+            $inv['invoice_number'], 
+            $details_text, 
+            number_format($total_final, 0, ',', '.'), 
+            $bank_info_text, 
+            date('d M Y', strtotime($inv['due_date'])), 
+            $link_invoice
+        ],
+        $wa_template
+    );
 
     // Redirect langsung ke WhatsApp Web / App
     $wa_url = "https://wa.me/" . $to . "?text=" . urlencode($pesan);
