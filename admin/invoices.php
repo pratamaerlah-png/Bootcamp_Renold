@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+ob_start(); // Mencegah error blank saat redirect (Headers already sent)
 require_once 'header.php';
 
 $action = $_GET['action'] ?? 'list';
@@ -115,12 +118,37 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['save_invoice'])) {
     header("Location: invoices.php?msg=saved");
     exit;
 }
+
+// Hitung total pendapatan untuk ditampilkan di pojok kanan atas
+$total_all = 0;
+$total_paid = 0;
+try {
+    $res_totals = $conn->query("SELECT 
+        SUM(total_amount) as total_all,
+        SUM(CASE WHEN status = 'paid' THEN total_amount ELSE 0 END) as total_paid
+    FROM invoices");
+    if ($res_totals) {
+        $totals = $res_totals->fetch_assoc();
+        $total_all = $totals['total_all'] ?? 0;
+        $total_paid = $totals['total_paid'] ?? 0;
+    }
+} catch (Exception $e) {}
 ?>
 
 <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
     <div>
         <h1 class="text-3xl font-bold text-white"><?= ($id > 0) ? 'Edit Tagihan' : 'Buat Tagihan Baru' ?></h1>
         <p class="text-gray-500 mt-1">Kelola tagihan dan pembayaran klien.</p>
+    </div>
+    <div class="bg-gray-800 border border-gray-700 px-6 py-3 rounded-xl shadow-lg flex gap-6">
+        <div>
+            <p class="text-xs text-gray-500 font-bold uppercase tracking-wider mb-1">Semua Tagihan</p>
+            <p class="text-lg font-bold text-white">Rp <?= number_format($total_all, 0, ',', '.') ?></p>
+        </div>
+        <div class="border-l border-gray-700 pl-6">
+            <p class="text-xs text-green-500 font-bold uppercase tracking-wider mb-1">Pendapatan (Lunas)</p>
+            <p class="text-lg font-bold text-green-400">Rp <?= number_format($total_paid, 0, ',', '.') ?></p>
+        </div>
     </div>
 </div>
 
