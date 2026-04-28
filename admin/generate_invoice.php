@@ -372,7 +372,7 @@ $html .= '
     <!-- Footer (Dipindahkan keluar container agar full width) -->
     <div class="footer">
         <a href="https://wa.me/6285298122890">Pratama Digitect</a> &bull; Dicetak pada: ' . date('d M Y H:i') . '<br>
-        <a href="https://' . $_SERVER['HTTP_HOST'] . '" target="_blank">' . ((strpos($_SERVER['HTTP_HOST'], 'www.') === 0) ? $_SERVER['HTTP_HOST'] : 'www.' . $_SERVER['HTTP_HOST']) . '</a>
+        <a href="https://www.pratamadigitect.com" target="_blank">www.pratamadigitect.com</a>
     </div>
 </body>
 </html>';

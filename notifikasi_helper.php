@@ -11,7 +11,7 @@ require_once __DIR__ . '/phpmailer/src/PHPMailer.php';
 require_once __DIR__ . '/phpmailer/src/SMTP.php';
 
 // Memuat file kredensial Anda
-require_once __DIR__ . '/../kunci_rahasia.php';
+require_once __DIR__ . '/../../kunci_rahasia.php';
 
 // =================================================================
 // === FUNGSI PENGIRIMAN EMAIL =====================================
